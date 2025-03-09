@@ -13,6 +13,9 @@ const nextConfig: NextConfig = {
   // Remove the Next.js header to prevent exposing framework details
   poweredByHeader: false,
 
+  // Enable static export output for GitHub Pages deployment
+  output: "export",
+
   // Custom HTTP headers to reinforce SEO and security best practices
   async headers() {
     return [
