@@ -17,17 +17,17 @@ export default function ClientInteractiveDock() {
     {
       icon: <Icon icon={"fluent-color:text-bullet-list-square-sparkle-32"} className='text-white size-6'/>,
       label: "About",
-      onClick: () => router.push("about"),
+      onClick: () => router.push("/about"),
     },
     {
       icon: <Icon icon={""} />,
       label: "Services",
-      onClick: () => router.push("services"),
+      onClick: () => router.push("/services"),
     },
     {
       icon: <Icon icon={"fluent-color:mail-32"} className='text-white size-6' />,
       label: "Contact",
-      onClick: () => router.push("contact"),
+      onClick: () => router.push("/contact"),
     },
   ];
 
