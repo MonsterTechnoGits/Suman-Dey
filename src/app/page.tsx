@@ -121,7 +121,7 @@ export default function Home() {
             href='/contact'
             className='relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-500 text-white font-semibold rounded-2xl hover:from-purple-700 hover:to-purple-600 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 cursor-pointer'
           >
-            Let's Work Together
+            Let&apos;s Work Together
           </Link>
           <Link
             href='/about'
@@ -189,9 +189,9 @@ export default function Home() {
               Ready to Build Something <span className='text-purple-400'>Extraordinary?</span>
             </h2>
             <p className='text-xl text-gray-300 leading-relaxed'>
-              I'm passionate about collaborating with teams and individuals to create innovative
+              I&apos;m passionate about collaborating with teams and individuals to create innovative
               solutions that make a real impact. Whether you need a complete web application, system
-              architecture, or technical consultation, I'm here to help bring your vision to life.
+              architecture, or technical consultation, I&apos;m here to help bring your vision to life.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center pt-6 relative z-10'>
               <Link

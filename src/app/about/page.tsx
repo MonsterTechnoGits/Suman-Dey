@@ -207,7 +207,7 @@ export default function AboutPage() {
           <h2 className='text-2xl font-bold text-purple-400 mb-4 sr-only'>Professional Background</h2>
           <div className='text-lg text-gray-300 leading-relaxed'>
             <p>
-              I'm <strong className='text-white' itemProp="name">Suman Dey</strong>, a{" "}
+              I&apos;m <strong className='text-white' itemProp="name">Suman Dey</strong>, a{" "}
               <span className='text-purple-400 font-medium' itemProp="jobTitle">Senior Full Stack Developer</span> with over{" "}
               <strong>7 years</strong> of hands-on experience building and scaling secure,
               high-performing web applications using cutting-edge technologies including <strong>React.js</strong>, <strong>Node.js</strong>, and <strong>TypeScript</strong>.
@@ -221,10 +221,10 @@ export default function AboutPage() {
               Currently serving as <strong>Team Lead & Technical Architect</strong> at{" "}
               <span itemProp="worksFor" itemScope itemType="https://schema.org/Organization">
                 <strong itemProp="name">ROITech Consulting</strong>
-              </span>, I've successfully delivered enterprise-grade systems, including high-performance resume search engines using PostgreSQL trigram indexes, and designed automated workflows for PDF/Excel processing and system integrations.
+              </span>, I&apos;ve successfully delivered enterprise-grade systems, including high-performance resume search engines using PostgreSQL trigram indexes, and designed automated workflows for PDF/Excel processing and system integrations.
             </p>
             <p className='mt-4'>
-              My expertise extends to cloud technologies with <strong>AWS</strong> (S3, EC2), implementing <strong>CI/CD pipelines</strong>, and developing hybrid mobile applications using <strong>SAPUI5</strong>, <strong>Cordova</strong>, and <strong>Firebase</strong>. I'm passionate about leveraging modern development practices to create scalable, production-ready applications.
+              My expertise extends to cloud technologies with <strong>AWS</strong> (S3, EC2), implementing <strong>CI/CD pipelines</strong>, and developing hybrid mobile applications using <strong>SAPUI5</strong>, <strong>Cordova</strong>, and <strong>Firebase</strong>. I&apos;m passionate about leveraging modern development practices to create scalable, production-ready applications.
             </p>
           </div>
         </section>
@@ -236,13 +236,13 @@ export default function AboutPage() {
             My journey in software development began with curiosity and a basic PC with dial-up internet. I still remember the excitement of creating my first interactive login form with HTML and JavaScript — each successfully resolved bug felt like solving a complex puzzle that fueled my passion for programming.
           </p>
           <p>
-            This initial curiosity evolved into expertise in full-stack development, where I discovered my strength in creating seamless user experiences through frontend technologies like <strong>React.js</strong> and <strong>TypeScript</strong>, while architecting scalable backend systems. As a self-motivated learner, I've dedicated countless hours mastering advanced concepts like Node.js multi-threading and React's reconciliation algorithm to optimize application performance.
+            This initial curiosity evolved into expertise in full-stack development, where I discovered my strength in creating seamless user experiences through frontend technologies like <strong>React.js</strong> and <strong>TypeScript</strong>, while architecting scalable backend systems. As a self-motivated learner, I&apos;ve dedicated countless hours mastering advanced concepts like Node.js multi-threading and React&apos;s reconciliation algorithm to optimize application performance.
           </p>
           <p>
-            Throughout my career, I've navigated high-pressure production environments, managed complex system refactors, and led development teams through challenging projects. The satisfaction of launching applications that perform reliably under real-world conditions drives my commitment to quality code and robust architecture.
+            Throughout my career, I&apos;ve navigated high-pressure production environments, managed complex system refactors, and led development teams through challenging projects. The satisfaction of launching applications that perform reliably under real-world conditions drives my commitment to quality code and robust architecture.
           </p>
           <p>
-            What motivates me most isn't just the technology — it's the impact on users and the trust that teams place in well-engineered systems. This responsibility drives me to write clean, maintainable code and mentor fellow developers in best practices.
+            What motivates me most isn&apos;t just the technology — it&apos;s the impact on users and the trust that teams place in well-engineered systems. This responsibility drives me to write clean, maintainable code and mentor fellow developers in best practices.
           </p>
         </section>
 
@@ -572,7 +572,7 @@ export default function AboutPage() {
         <section className='text-center mt-10'>
           <h2 className='text-2xl font-bold text-purple-400 mb-4'>Ready to Collaborate?</h2>
           <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
-            I'm always interested in challenging projects and opportunities to create impactful software solutions. Let's discuss how we can work together to bring your ideas to life.
+            I&apos;m always interested in challenging projects and opportunities to create impactful software solutions. Let&apos;s discuss how we can work together to bring your ideas to life.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
             <Link
