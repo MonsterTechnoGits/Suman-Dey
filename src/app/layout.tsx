@@ -97,6 +97,12 @@ const personSchema = {
   jobTitle: "Senior Full Stack Developer",
   description:
     "Suman Dey is a Senior Full Stack Developer specializing in React, Node.js, TypeScript, and modern JavaScript frameworks. With extensive experience in both frontend and backend development, he creates responsive web applications with a focus on performance and user experience.",
+  // Add your birth details here for better Knowledge Panel
+  birthDate: "1997-09-21", // Replace with your actual birth date (YYYY-MM-DD format)
+  birthPlace: {
+    "@type": "Place",
+    name: "Contai, West Bengal, India",
+  },
   knowsAbout: [
     "React.js",
     "Node.js",
@@ -110,31 +116,61 @@ const personSchema = {
     "RESTful APIs",
     "GraphQL",
     "Next.js",
+    "AWS",
+    "PostgreSQL",
+    "SAPUI5",
+    "CI/CD",
+    "Docker",
+    "Team Leadership",
   ],
   sameAs: [
     "https://github.com/MonsterTechnoGits",
     "https://www.linkedin.com/in/imsumandey/",
     "https://www.facebook.com/ImSumanDeyy",
     "https://www.instagram.com/ImSumanDey",
-    // Add additional profiles if available
   ],
   alumniOf: {
     "@type": "EducationalOrganization",
-    name: "Vidyasagar University", // Replace with your actual education
+    name: "Vidyasagar University",
+    url: "https://www.vidyasagar.ac.in/",
   },
   worksFor: {
     "@type": "Organization",
-    name: "ROITech", // Replace with your actual company
+    name: "ROITech Consulting",
+    url: "https://www.roitech.biz", // Replace with actual company URL
+    description: "IT consulting firm specializing in enterprise software solutions, web development, and digital transformation services.",
+  },
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "Full Stack Developer",
+    occupationalCategory: "Software Engineering",
+    description: "Develops both frontend and backend components of web applications using modern JavaScript frameworks and technologies.",
+    skills: "React.js, Node.js, TypeScript, JavaScript, PostgreSQL, AWS, CI/CD, Team Leadership",
   },
   workLocation: {
     "@type": "Place",
     address: {
       "@type": "PostalAddress",
       addressCountry: "India",
+      addressRegion: "West Bengal",
     },
   },
+  award: [
+    "Team Lead & Technical Architect at ROITech Consulting",
+    "7+ Years of Full Stack Development Experience",
+    "50+ Successful Project Deployments",
+    "Expert in Modern JavaScript Frameworks",
+  ],
+  accomplishment: [
+    "Built high-performance resume search engine with PostgreSQL trigram indexes",
+    "Architected scalable systems using Node.js worker threads",
+    "Led cross-functional development teams and mentored junior developers",
+    "Implemented CI/CD pipelines and AWS cloud deployments",
+    "Developed enterprise SAP UI5 applications and hybrid mobile apps",
+    "Optimized database performance and API response times",
+  ],
   skills:
-    "React.js, Node.js, TypeScript, JavaScript, Frontend Development, Backend Development, Full Stack Development",
+    "React.js, Node.js, TypeScript, JavaScript, Frontend Development, Backend Development, Full Stack Development, PostgreSQL, AWS, SAPUI5, CI/CD, Docker, Team Leadership",
 };
 
 // Create a professional WebPage schema as well
@@ -172,6 +208,9 @@ const webpageSchema = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Properly placed Script components for structured data */}
         <Script
@@ -215,7 +254,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   sparkCount={8}
                   duration={400}
                 >
-                  <div className='w-full h-full flex flex-col lg:flex-row justify-center items-center px-50 py-20 gap-10'>
+                  <div className='w-full h-full flex flex-col lg:flex-row justify-center items-center px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32 py-6 sm:py-10 lg:py-20 gap-4 sm:gap-6 lg:gap-10'>
                     <ProfileCard />
                     <div className='w-full h-full rounded-3xl bg-[#1212127e] backdrop-blur-2xl flex-1'>
                       <Noise
@@ -226,8 +265,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         patternAlpha={15}
                       >
                         <main className='w-full h-full relative z-10 overflow-auto'>
-                          <div className='w-full px-20 pb-[110px] pt-20'>{children}</div>
-                          <div className='fixed bottom-0 left-0 w-full z-50 h-[100px] bg-gradient-to-t from-[#121212] via-[#121212d5] to-[#121212ea] rounded-b-3xl backdrop-blur-2xl'>
+                          <div className='w-full px-4 sm:px-6 md:px-10 lg:px-20 pb-[110px] pt-6 sm:pt-10 lg:pt-20'>
+                            {children}
+                          </div>
+                          <div className='fixed bottom-0 left-0 w-full z-50 h-[80px] sm:h-[100px] bg-gradient-to-t from-[#121212] via-[#121212d5] to-[#121212ea] rounded-b-3xl backdrop-blur-2xl'>
                             <ClientInteractiveDock />
                           </div>
                         </main>

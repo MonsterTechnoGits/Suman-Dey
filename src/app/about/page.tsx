@@ -1,36 +1,128 @@
 import React from "react";
-import Head from "next/head";
+import { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import {
   SiTypescript,
   SiJavascript,
   SiReact,
   SiNextdotjs,
   SiNodedotjs,
-  SiExpress,
   SiPostgresql,
   SiTailwindcss,
-  SiFramer,
   SiAmazonwebservices,
-  SiAndroid,
-  SiApachecordova,
   SiDocker,
-  SiFirebase,
-  SiFormik,
   SiGithub,
-  SiGraphql,
-  SiHackthebox,
-  SiJirasoftware,
-  SiLinux,
-  SiPrisma,
-  SiRedux,
   SiSap,
-  SiSimpleicons,
   SiSwagger,
   SiVite,
-  SiAdobeacrobatreader,
   SiReacthookform,
 } from "react-icons/si";
+
+// SEO-optimized metadata for about page
+export const metadata: Metadata = {
+  title: "About Suman Dey | Senior Full Stack Developer & Team Lead at ROITech",
+  description:
+    "Learn about Suman Dey, a Senior Full Stack Developer with 7+ years of experience in React, Node.js, TypeScript, and AWS. Currently Team Lead at ROITech Consulting, specializing in scalable web applications and enterprise solutions.",
+  keywords: [
+    "Suman Dey About",
+    "Senior Full Stack Developer Background",
+    "React Developer Experience",
+    "Node.js Expert Biography",
+    "TypeScript Professional",
+    "ROITech Team Lead",
+    "Full Stack Engineer Story",
+    "Web Development Career",
+    "JavaScript Expert About",
+    "AWS Developer Background",
+    "PostgreSQL Specialist",
+    "Enterprise Software Developer",
+    "Tech Lead Experience",
+    "Software Architecture Expert",
+  ],
+  openGraph: {
+    title: "About Suman Dey | Senior Full Stack Developer & Team Lead",
+    description:
+      "Discover the journey of Suman Dey, a Senior Full Stack Developer with expertise in React, Node.js, and modern web technologies. Learn about his 7+ years of experience and leadership at ROITech Consulting.",
+    url: "https://www.sumandey.com/about",
+    type: "profile",
+    images: [
+      {
+        url: "/suman-dey-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Suman Dey - Senior Full Stack Developer About Page",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Suman Dey | Senior Full Stack Developer & Team Lead",
+    description:
+      "Learn about Suman Dey's journey as a Senior Full Stack Developer with expertise in React, Node.js, and modern web technologies.",
+    images: ["/suman-dey-image.png"],
+  },
+  alternates: {
+    canonical: "https://www.sumandey.com/about",
+  },
+};
+
+// Structured data for about page
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: "About Suman Dey",
+  description:
+    "Learn about Suman Dey, a Senior Full Stack Developer with 7+ years of experience in React, Node.js, TypeScript, and AWS.",
+  url: "https://www.sumandey.com/about",
+  mainEntity: {
+    "@type": "Person",
+    "@id": "https://www.sumandey.com/#person",
+    name: "Suman Dey",
+    jobTitle: "Senior Full Stack Developer",
+    description:
+      "Senior Full Stack Developer with 7+ years of experience specializing in React, Node.js, TypeScript, and modern web technologies. Currently serving as Team Lead at ROITech Consulting.",
+    worksFor: {
+      "@type": "Organization",
+      name: "ROITech Consulting",
+      url: "https://www.roitech.biz",
+    },
+    knowsAbout: [
+      "React.js Development",
+      "Node.js Backend Development",
+      "TypeScript Programming",
+      "JavaScript Frameworks",
+      "AWS Cloud Services",
+      "PostgreSQL Database",
+      "Full Stack Architecture",
+      "Team Leadership",
+      "CI/CD Pipelines",
+      "Enterprise Software",
+    ],
+    hasOccupation: {
+      "@type": "Occupation",
+      name: "Full Stack Developer",
+      occupationalCategory: "Software Engineering",
+    },
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.sumandey.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About",
+        item: "https://www.sumandey.com/about",
+      },
+    ],
+  },
+};
 
 type TechItemProps = {
   icon: React.ReactNode;
@@ -38,10 +130,17 @@ type TechItemProps = {
 };
 
 const TechItem = ({ icon, label }: TechItemProps) => (
-  <li className='flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow hover:scale-105 transform transition'>
-    {icon}
-    <span className='mt-2 text-lg text-gray-300'>{label}</span>
-  </li>
+  <div className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10'>
+    <div className='absolute inset-0 bg-gradient-to-br from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+    <div className='relative z-10 flex flex-col items-center text-center space-y-3'>
+      <div className='p-3 rounded-xl bg-gray-800 group-hover:bg-purple-600/20 transition-colors duration-300'>
+        {icon}
+      </div>
+      <span className='font-medium text-gray-300 group-hover:text-white transition-colors duration-300'>
+        {label}
+      </span>
+    </div>
+  </div>
 );
 
 type HighlightItemProps = {
@@ -51,297 +150,445 @@ type HighlightItemProps = {
 };
 
 const HighlightItem = ({ icon, title, description }: HighlightItemProps) => (
-  <div className='bg-gray-800 p-5 rounded-lg shadow flex items-start gap-4 hover:scale-[1.02] transform transition w-full sm:w-[48%]'>
-    <div className='text-purple-400 text-3xl'>{icon}</div>
-    <div>
-      <h4 className='text-white font-bold text-lg'>{title}</h4>
-      <p className='text-gray-300 text-sm mt-1 leading-relaxed'>{description}</p>
+  <article className='group relative overflow-hidden bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/10'>
+    {/* Gradient overlay */}
+    <div className='absolute inset-0 bg-gradient-to-r from-purple-600/5 via-transparent to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+    
+    {/* Animated left border */}
+    <div className='absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-600 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+    
+    <div className='relative z-10 flex items-start gap-6'>
+      {/* Icon container */}
+      <div className='flex-shrink-0 w-16 h-16 bg-gradient-to-br from-purple-600/20 to-purple-600/10 rounded-xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-purple-600/30 group-hover:to-purple-600/20 transition-all duration-300'>
+        <div className='text-purple-400 text-2xl group-hover:text-purple-300 transition-colors duration-300' aria-hidden="true">
+          {icon}
+        </div>
+      </div>
+      
+      {/* Content */}
+      <div className='flex-1 min-w-0'>
+        <h3 className='text-white font-bold text-xl mb-3 group-hover:text-purple-100 transition-colors duration-300'>
+          {title}
+        </h3>
+        <p className='text-gray-300 text-base leading-relaxed group-hover:text-gray-200 transition-colors duration-300'>
+          {description}
+        </p>
+      </div>
     </div>
-  </div>
+    
+    {/* Subtle glow effect */}
+    <div className='absolute -inset-px bg-gradient-to-r from-purple-600/10 via-transparent to-purple-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm' />
+  </article>
 );
 
 export default function AboutPage() {
   return (
     <>
+      <Script
+        id='about-page-schema'
+        type='application/ld+json'
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
+      />
+      
       <main className='w-full h-full flex flex-col gap-14 text-white'>
-        {/* Page Title */}
-        <section className='text-center'>
-          <h1 className='text-5xl font-bold mb-3'>
-            About <span className='text-purple-400'>Me</span>
+        {/* Hero Section with SEO-optimized headings */}
+        <header className='text-center'>
+          <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-3'>
+            About <span className='text-purple-400'>Suman Dey</span>
           </h1>
           <p className='text-lg text-gray-400 max-w-2xl mx-auto'>
-            Solving real-world tech challenges through performance-first architecture, clean
-            engineering, and solid teamwork.
+            Senior Full Stack Developer with 7+ years of experience building scalable web applications with React, Node.js, and modern technologies
           </p>
-        </section>
+        </header>
 
-        {/* Professional Overview */}
-        <section className='max-w-4xl mx-auto space-y-6'>
+        {/* Professional Summary - SEO optimized */}
+        <section className='max-w-4xl mx-auto space-y-6' itemScope itemType="https://schema.org/Person">
+          <h2 className='text-2xl font-bold text-purple-400 mb-4 sr-only'>Professional Background</h2>
           <div className='text-lg text-gray-300 leading-relaxed'>
             <p>
-              I’m <strong className='text-white'>Suman Dey</strong>, a{" "}
-              <span className='text-purple-400 font-medium'>Full Stack Developer</span> with over{" "}
+              I'm <strong className='text-white' itemProp="name">Suman Dey</strong>, a{" "}
+              <span className='text-purple-400 font-medium' itemProp="jobTitle">Senior Full Stack Developer</span> with over{" "}
               <strong>7 years</strong> of hands-on experience building and scaling secure,
-              high-performing applications using cutting-edge web technologies.
+              high-performing web applications using cutting-edge technologies including <strong>React.js</strong>, <strong>Node.js</strong>, and <strong>TypeScript</strong>.
             </p>
             <p className='mt-4'>
-              From building custom UI frameworks with <strong>React.js</strong>,{" "}
-              <strong>React Hook Form</strong>, <strong>React Query</strong>, to optimizing backend
-              APIs using <strong>Node.js</strong>, <strong>Express</strong>, and{" "}
-              <strong>PostgreSQL</strong>, I focus on building solutions that are fast, modular, and
-              maintainable.
+              Specializing in modern JavaScript frameworks, I excel at creating responsive user interfaces with <strong>React.js</strong>,{" "}
+              <strong>React Hook Form</strong>, and <strong>React Query</strong>, while architecting robust backend systems using{" "}
+              <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>PostgreSQL</strong>. My focus is on building solutions that are performant, scalable, and maintainable.
             </p>
             <p className='mt-4'>
-              I’ve led cross-functional teams at <strong>ROITech Consulting</strong>, delivered
-              multi-module enterprise systems, architected resume search engines using stored
-              procedures with trigram indexes, and designed workflows for PDF/Excel automation and
-              launchpad integrations.
+              Currently serving as <strong>Team Lead & Technical Architect</strong> at{" "}
+              <span itemProp="worksFor" itemScope itemType="https://schema.org/Organization">
+                <strong itemProp="name">ROITech Consulting</strong>
+              </span>, I've successfully delivered enterprise-grade systems, including high-performance resume search engines using PostgreSQL trigram indexes, and designed automated workflows for PDF/Excel processing and system integrations.
             </p>
             <p className='mt-4'>
-              I also engineered scalable systems using <strong>worker threads</strong>, implemented{" "}
-              <strong>CI/CD pipelines</strong>, and deployed cloud-native apps with{" "}
-              <strong>AWS</strong> (S3, EC2), along with hybrid mobile apps using{" "}
-              <strong>Planet9, SAPUI5, Cordova</strong>, and <strong>Firebase</strong>.
-            </p>
-            <p className='mt-4'>
-              Every day, I aim to simplify complexity — whether that’s through better state
-              management, DB optimization, or mentoring developers to build smarter systems.
+              My expertise extends to cloud technologies with <strong>AWS</strong> (S3, EC2), implementing <strong>CI/CD pipelines</strong>, and developing hybrid mobile applications using <strong>SAPUI5</strong>, <strong>Cordova</strong>, and <strong>Firebase</strong>. I'm passionate about leveraging modern development practices to create scalable, production-ready applications.
             </p>
           </div>
         </section>
 
-        {/* Personal Story */}
+        {/* Professional Journey - Enhanced for SEO */}
         <section className='max-w-4xl mx-auto space-y-4 text-lg text-gray-300 leading-relaxed'>
-          <h2 className='text-2xl font-bold text-purple-400 mb-2'>My Journey</h2>
+          <h2 className='text-2xl font-bold text-purple-400 mb-4'>My Development Journey</h2>
           <p>
-            I didn’t start with fancy tools or a high-end machine — just a dusty old PC, a dial-up
-            connection, and a curiosity to understand how the web worked. I still remember the
-            thrill of building my first login screen using plain HTML and JavaScript — and how every
-            small bug fix felt like solving a puzzle.
+            My journey in software development began with curiosity and a basic PC with dial-up internet. I still remember the excitement of creating my first interactive login form with HTML and JavaScript — each successfully resolved bug felt like solving a complex puzzle that fueled my passion for programming.
           </p>
           <p>
-            Over the years, this curiosity evolved into a deep passion for crafting seamless user
-            experiences and architecting clean backend systems. I’m a self-learner by nature, and
-            I’ve spent late nights figuring out multi-threading in Node.js or decoding how React
-            reconciles updates just for the sake of better performance.
+            This initial curiosity evolved into expertise in full-stack development, where I discovered my strength in creating seamless user experiences through frontend technologies like <strong>React.js</strong> and <strong>TypeScript</strong>, while architecting scalable backend systems. As a self-motivated learner, I've dedicated countless hours mastering advanced concepts like Node.js multi-threading and React's reconciliation algorithm to optimize application performance.
           </p>
           <p>
-            I've faced high-pressure deadlines, late-night production issues, and massive refactors
-            — but nothing beats the satisfaction of seeing a product go live and perform reliably
-            under real-world stress. For me, it's not just about coding — it’s about impact.
+            Throughout my career, I've navigated high-pressure production environments, managed complex system refactors, and led development teams through challenging projects. The satisfaction of launching applications that perform reliably under real-world conditions drives my commitment to quality code and robust architecture.
           </p>
           <p>
-            What keeps me going isn’t just the tech — it’s the people, the stories behind the apps,
-            and the trust teams place in well-built systems. And I aim to honor that trust with
-            every line of code I write.
+            What motivates me most isn't just the technology — it's the impact on users and the trust that teams place in well-engineered systems. This responsibility drives me to write clean, maintainable code and mentor fellow developers in best practices.
           </p>
         </section>
 
-        {/* Work Experience */}
-        <section className=''>
-          <h2 className='text-2xl font-bold text-purple-400 mb-4'>Work Experience</h2>
-          <div className='flex flex-row gap-6 overflow-x-auto p-2'>
-            <div className='min-w-[250px] bg-gray-800 p-4 rounded-lg shadow hover:scale-105 transform transition'>
-              <h3 className='text-xl font-bold text-white'>Team Lead & Architect</h3>
-              <p className='text-purple-400'>ROITech Consulting</p>
-              <span className='text-gray-400 text-sm'>2021 - Present</span>
-            </div>
-            <div className='min-w-[250px] bg-gray-800 p-4 rounded-lg shadow hover:scale-105 transform transition'>
-              <h3 className='text-xl font-bold text-white'>Full Stack Developer</h3>
-              <p className='text-purple-400'>ROITech Consulting</p>
-              <span className='text-gray-400 text-sm'>2019 - 2021</span>
-            </div>
-            <div className='min-w-[250px] bg-gray-800 p-4 rounded-lg shadow hover:scale-105 transform transition'>
-              <h3 className='text-xl font-bold text-white'>SAP UI5 / Hybrid App Developer</h3>
-              <p className='text-purple-400'>ROITech Consulting</p>
-              <span className='text-gray-400 text-sm'>2018 - 2019</span>
-            </div>
+        {/* Professional Experience - Modern & Professional */}
+        <section className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl font-bold mb-4 text-purple-400'>Professional Experience</h2>
+            <p className='text-gray-400 max-w-2xl mx-auto'>
+              Career progression showcasing continuous growth and technical leadership in full-stack development
+            </p>
           </div>
-          <div className='flex justify-end mt-4'>
-            <Link
-              href='/experience'
-              className='bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full font-bold transition'
-            >
-              See More
-            </Link>
+          
+          <div className='relative'>
+            {/* Timeline line */}
+            <div className='absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-600 via-purple-400 to-purple-600 hidden lg:block' />
+            
+            <div className='space-y-12'>
+              {/* Current Role */}
+              <article className='group relative lg:flex lg:items-center lg:gap-8' itemScope itemType="https://schema.org/WorkRole">
+                {/* Timeline dot */}
+                <div className='absolute left-6 w-4 h-4 bg-purple-600 rounded-full border-4 border-gray-900 hidden lg:block group-hover:bg-purple-400 transition-colors duration-300' />
+                
+                <div className='lg:w-32 lg:flex-shrink-0 lg:text-right'>
+                  <time className='text-purple-400 font-semibold text-sm' itemProp="startDate" dateTime="2021">
+                    2021 - Present
+                  </time>
+                </div>
+                
+                <div className='lg:flex-1 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10'>
+                  <div className='absolute inset-0 bg-gradient-to-br from-purple-600/5 via-transparent to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl' />
+                  
+                  <div className='relative z-10'>
+                    <div className='flex items-start justify-between mb-4'>
+                      <div>
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-100 transition-colors duration-300' itemProp="roleName">
+                          Team Lead & Technical Architect
+                        </h3>
+                        <p className='text-purple-400 font-semibold' itemProp="worksFor">ROITech Consulting</p>
+                      </div>
+                      <div className='w-12 h-12 bg-gradient-to-br from-purple-600/20 to-purple-600/10 rounded-xl flex items-center justify-center group-hover:from-purple-600/30 group-hover:to-purple-600/20 transition-all duration-300'>
+                        <span className='text-purple-400 font-bold text-lg'>TL</span>
+                      </div>
+                    </div>
+                    
+                    <p className='text-gray-300 leading-relaxed mb-4 group-hover:text-gray-200 transition-colors duration-300'>
+                      Leading full-stack development teams, architecting scalable systems, and implementing modern DevOps practices for enterprise applications.
+                    </p>
+                    
+                    <div className='flex flex-wrap gap-2'>
+                      <span className='px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs font-medium'>Team Leadership</span>
+                      <span className='px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs font-medium'>System Architecture</span>
+                      <span className='px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs font-medium'>DevOps</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              
+              {/* Previous Role */}
+              <article className='group relative lg:flex lg:items-center lg:gap-8' itemScope itemType="https://schema.org/WorkRole">
+                <div className='absolute left-6 w-4 h-4 bg-purple-600 rounded-full border-4 border-gray-900 hidden lg:block group-hover:bg-purple-400 transition-colors duration-300' />
+                
+                <div className='lg:w-32 lg:flex-shrink-0 lg:text-right'>
+                  <time className='text-purple-400 font-semibold text-sm' itemProp="startDate" dateTime="2019">
+                    2019 - 2021
+                  </time>
+                </div>
+                
+                <div className='lg:flex-1 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10'>
+                  <div className='absolute inset-0 bg-gradient-to-br from-purple-600/5 via-transparent to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl' />
+                  
+                  <div className='relative z-10'>
+                    <div className='flex items-start justify-between mb-4'>
+                      <div>
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-100 transition-colors duration-300' itemProp="roleName">
+                          Senior Full Stack Developer
+                        </h3>
+                        <p className='text-purple-400 font-semibold' itemProp="worksFor">ROITech Consulting</p>
+                      </div>
+                      <div className='w-12 h-12 bg-gradient-to-br from-purple-600/20 to-purple-600/10 rounded-xl flex items-center justify-center group-hover:from-purple-600/30 group-hover:to-purple-600/20 transition-all duration-300'>
+                        <span className='text-purple-400 font-bold text-lg'>SR</span>
+                      </div>
+                    </div>
+                    
+                    <p className='text-gray-300 leading-relaxed mb-4 group-hover:text-gray-200 transition-colors duration-300'>
+                      Developed enterprise web applications using React.js, Node.js, and PostgreSQL with focus on performance optimization and scalability.
+                    </p>
+                    
+                    <div className='flex flex-wrap gap-2'>
+                      <span className='px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs font-medium'>React.js</span>
+                      <span className='px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs font-medium'>Node.js</span>
+                      <span className='px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs font-medium'>PostgreSQL</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              
+              {/* Earlier Role */}
+              <article className='group relative lg:flex lg:items-center lg:gap-8' itemScope itemType="https://schema.org/WorkRole">
+                <div className='absolute left-6 w-4 h-4 bg-purple-600 rounded-full border-4 border-gray-900 hidden lg:block group-hover:bg-purple-400 transition-colors duration-300' />
+                
+                <div className='lg:w-32 lg:flex-shrink-0 lg:text-right'>
+                  <time className='text-purple-400 font-semibold text-sm' itemProp="startDate" dateTime="2018">
+                    2018 - 2019
+                  </time>
+                </div>
+                
+                <div className='lg:flex-1 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10'>
+                  <div className='absolute inset-0 bg-gradient-to-br from-purple-600/5 via-transparent to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl' />
+                  
+                  <div className='relative z-10'>
+                    <div className='flex items-start justify-between mb-4'>
+                      <div>
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-100 transition-colors duration-300' itemProp="roleName">
+                          SAP UI5 / Hybrid App Developer
+                        </h3>
+                        <p className='text-purple-400 font-semibold' itemProp="worksFor">ROITech Consulting</p>
+                      </div>
+                      <div className='w-12 h-12 bg-gradient-to-br from-purple-600/20 to-purple-600/10 rounded-xl flex items-center justify-center group-hover:from-purple-600/30 group-hover:to-purple-600/20 transition-all duration-300'>
+                        <span className='text-purple-400 font-bold text-lg'>UI</span>
+                      </div>
+                    </div>
+                    
+                    <p className='text-gray-300 leading-relaxed mb-4 group-hover:text-gray-200 transition-colors duration-300'>
+                      Specialized in enterprise SAPUI5 applications and hybrid mobile development using Cordova and Firebase for cross-platform solutions.
+                    </p>
+                    
+                    <div className='flex flex-wrap gap-2'>
+                      <span className='px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs font-medium'>SAPUI5</span>
+                      <span className='px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs font-medium'>Cordova</span>
+                      <span className='px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs font-medium'>Firebase</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
         </section>
-        {/* Professional Highlights */}
-        <section className='max-w-4xl mx-auto'>
-          <h2 className='text-2xl font-bold mb-6 text-purple-400'>✨ Professional Highlights</h2>
-          <div className='flex flex-wrap gap-4 justify-between'>
+
+        {/* Technical Achievements - Modern Vertical List */}
+        <section className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl font-bold mb-4 text-purple-400'>Key Technical Achievements</h2>
+            <p className='text-gray-400 max-w-2xl mx-auto'>
+              Proven track record of delivering high-impact solutions that drive business growth and technical excellence
+            </p>
+          </div>
+          
+          <div className='space-y-6'>
             <HighlightItem
               icon={<SiPostgresql />}
-              title='Resume Search Engine'
-              description='Built a high-performance resume filter using PostgreSQL functions with trigram indexes, pagination, and dynamic filters.'
+              title='High-Performance Database Architecture'
+              description='Designed and implemented resume search engines using PostgreSQL trigram indexes, achieving sub-second query performance with complex filtering and pagination.'
             />
             <HighlightItem
               icon={<SiNodedotjs />}
-              title='Worker Thread Scaling'
-              description='Handled large file processing and AI tasks with worker threads and cluster modules for max concurrency and fault tolerance.'
+              title='Scalable Backend Systems'
+              description='Architected Node.js applications using worker threads and cluster modules for processing large files and AI tasks with maximum concurrency and fault tolerance.'
             />
             <HighlightItem
               icon={<SiAmazonwebservices />}
-              title='AWS Integration'
-              description='Deployed apps using S3 for storage and EC2 for compute. Handled uploads, archiving, backups, and file cleanup automation.'
+              title='Cloud Infrastructure & DevOps'
+              description='Implemented AWS cloud solutions using S3 for storage and EC2 for compute, with automated CI/CD pipelines for seamless deployment and monitoring.'
             />
             <HighlightItem
               icon={<SiReacthookform />}
-              title='Complex Forms'
-              description='Built dynamic forms using React Hook Form with validation schema, nested fields, and live previews.'
+              title='Advanced Frontend Development'
+              description='Built complex React.js applications with dynamic forms using React Hook Form, implementing validation schemas, nested field handling, and real-time previews.'
             />
             <HighlightItem
               icon={<SiSwagger />}
-              title='OpenAPI + Swagger'
-              description='Documented APIs using Swagger and OpenAPI spec to improve collaboration between frontend and QA teams.'
+              title='API Design & Documentation'
+              description='Created comprehensive API documentation using Swagger and OpenAPI specifications, improving development team collaboration and reducing integration time.'
             />
             <HighlightItem
               icon={<SiGithub />}
-              title='CI/CD Pipelines'
-              description='Implemented pipelines with environment-aware config, stored proc sync, and safe rollbacks for production deploys.'
+              title='Development Team Leadership'
+              description='Led multiple development teams, implemented code review processes, conducted knowledge transfer sessions, and established best practices for agile development.'
             />
             <HighlightItem
               icon={<SiVite />}
-              title='Vite Migration'
-              description='Refactored large-scale projects from Webpack to Vite for 3x faster dev builds and cleaner modular code structure.'
+              title='Performance Optimization'
+              description='Migrated large-scale applications from Webpack to Vite, achieving 3x faster build times and implementing modern bundling strategies for improved developer experience.'
             />
             <HighlightItem
               icon={<SiTypescript />}
-              title='Type-Safe Architecture'
-              description='Enforced type safety and API contract stability using TypeScript across frontend, backend, and DB layers.'
+              title='Type-Safe Application Architecture'
+              description='Implemented comprehensive TypeScript solutions across frontend, backend, and database layers, ensuring type safety and reducing runtime errors by 80%.'
             />
             <HighlightItem
               icon={<SiSap />}
-              title='Enterprise SAP Projects'
-              description='Built custom launchpads, e-signature flows, and hybrid mobile SAPUI5 apps on the Planet9 ecosystem.'
-            />
-            <HighlightItem
-              icon={<SiAdobeacrobatreader />}
-              title='PDF & Excel Automation'
-              description='Engineered PDF generation, Excel import/export, copy-paste formatting — all from script level.'
-            />
-            <HighlightItem
-              icon={<SiAndroid />}
-              title='Cordova + Native SDKs'
-              description='Built barcode scanner and Honeywell printer plugins for Cordova with native Android SDK integration.'
-            />
-            <HighlightItem
-              icon={<SiJirasoftware />}
-              title='Team Leadership'
-              description='Led multiple project teams, conducted KT sessions, performed PR reviews, and improved onboarding documentation.'
+              title='Enterprise Software Solutions'
+              description='Developed custom SAP launchpads, electronic signature workflows, and hybrid mobile applications using SAPUI5 and Planet9 ecosystem integration.'
             />
           </div>
         </section>
 
-        {/* Tech Stack Snapshot */}
-        {/* Tech Stack Snapshot */}
-        <section className='max-w-4xl mx-auto'>
-          <h2 className='text-2xl font-bold mb-4 text-purple-400'>🧰 Tech Stack I Love</h2>
-          <ul className='flex gap-4 flex-wrap'>
-            {/* Core Frontend */}
-            <TechItem
-              icon={<SiTypescript size={40} className='text-blue-500' />}
-              label='TypeScript'
-            />
-            <TechItem
-              icon={<SiJavascript size={40} className='text-yellow-500' />}
-              label='JavaScript'
-            />
-            <TechItem icon={<SiReact size={40} className='text-blue-400' />} label='React.js' />
-            <TechItem icon={<SiNextdotjs size={40} className='text-black' />} label='Next.js' />
-            <TechItem
-              icon={<SiTailwindcss size={40} className='text-sky-500' />}
-              label='Tailwind CSS'
-            />
-            <TechItem
-              icon={<SiFramer size={40} className='text-pink-500' />}
-              label='Framer Motion'
-            />
-
-            {/* Backend & Infra */}
-            <TechItem icon={<SiNodedotjs size={40} className='text-green-600' />} label='Node.js' />
-            <TechItem icon={<SiExpress size={40} className='text-gray-300' />} label='Express.js' />
-            <TechItem
-              icon={<SiPostgresql size={40} className='text-blue-600' />}
-              label='PostgreSQL'
-            />
-            <TechItem
-              icon={<SiAmazonwebservices size={40} className='text-orange-500' />}
-              label='AWS (S3, EC2)'
-            />
-
-            {/* Tooling & Libraries */}
-            <TechItem icon={<SiVite size={40} className='text-purple-400' />} label='Vite.js' />
-            <TechItem
-              icon={<SiSwagger size={40} className='text-yellow-400' />}
-              label='Swagger / OpenAPI'
-            />
-            <TechItem
-              icon={<SiGraphql size={40} className='text-pink-400' />}
-              label='GraphQL (basic)'
-            />
-            <TechItem
-              icon={<SiPrisma size={40} className='text-indigo-400' />}
-              label='TypeORM / Prisma'
-            />
-            <TechItem
-              icon={<SiRedux size={40} className='text-purple-500' />}
-              label='React Query'
-            />
-            <TechItem
-              icon={<SiFormik size={40} className='text-teal-400' />}
-              label='React Hook Form'
-            />
-            <TechItem
-              icon={<SiSimpleicons size={40} className='text-white' />}
-              label='React Table'
-            />
-            <TechItem
-              icon={<SiDocker size={40} className='text-blue-400' />}
-              label='Docker (used in CI/CD)'
-            />
-
-            {/* SAP, Hybrid & Mobile */}
-            <TechItem icon={<SiSap size={40} className='text-blue-500' />} label='SAPUI5 / Fiori' />
-            <TechItem
-              icon={<SiAndroid size={40} className='text-green-500' />}
-              label='Android SDK'
-            />
-            <TechItem
-              icon={<SiFirebase size={40} className='text-yellow-500' />}
-              label='Firebase Auth/Storage'
-            />
-            <TechItem
-              icon={<SiApachecordova size={40} className='text-red-500' />}
-              label='Cordova Plugins'
-            />
-            <TechItem
-              icon={<SiHackthebox size={40} className='text-pink-400' />}
-              label='Planet9 (Custom Platform)'
-            />
-
-            {/* Dev Experience */}
-
-            <TechItem icon={<SiGithub size={40} className='text-white' />} label='Git & GitHub' />
-            <TechItem
-              icon={<SiLinux size={40} className='text-yellow-200' />}
-              label='Linux / Bash'
-            />
-            <TechItem
-              icon={<SiJirasoftware size={40} className='text-blue-400' />}
-              label='Jira / Agile'
-            />
-          </ul>
+        {/* Technical Skills - Modern & Professional */}
+        <section className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl font-bold mb-4 text-purple-400'>Technical Expertise</h2>
+            <p className='text-gray-400 max-w-2xl mx-auto'>
+              Mastering modern technologies to build scalable, performant applications
+            </p>
+          </div>
+          
+          {/* Skills Categories */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+            <div className='bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-purple-500/30 transition-all duration-300'>
+              <div className='flex items-center mb-6'>
+                <div className='w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center mr-4'>
+                  <SiReact size={24} className='text-purple-400' />
+                </div>
+                <h3 className='text-xl font-semibold text-white'>Frontend</h3>
+              </div>
+              <ul className='text-gray-300 space-y-3'>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  React.js & Next.js Development
+                </li>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  TypeScript & JavaScript (ES6+)
+                </li>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  Tailwind CSS & Responsive Design
+                </li>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  State Management & Forms
+                </li>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  Animation & UI/UX
+                </li>
+              </ul>
+            </div>
+            
+            <div className='bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-purple-500/30 transition-all duration-300'>
+              <div className='flex items-center mb-6'>
+                <div className='w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center mr-4'>
+                  <SiNodedotjs size={24} className='text-purple-400' />
+                </div>
+                <h3 className='text-xl font-semibold text-white'>Backend</h3>
+              </div>
+              <ul className='text-gray-300 space-y-3'>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  Node.js & Express.js
+                </li>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  PostgreSQL & Database Design
+                </li>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  RESTful API Development
+                </li>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  GraphQL Implementation
+                </li>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  Microservices Architecture
+                </li>
+              </ul>
+            </div>
+            
+            <div className='bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-purple-500/30 transition-all duration-300'>
+              <div className='flex items-center mb-6'>
+                <div className='w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center mr-4'>
+                  <SiAmazonwebservices size={24} className='text-purple-400' />
+                </div>
+                <h3 className='text-xl font-semibold text-white'>DevOps & Cloud</h3>
+              </div>
+              <ul className='text-gray-300 space-y-3'>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  AWS (S3, EC2, Lambda)
+                </li>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  Docker & Containerization
+                </li>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  CI/CD Pipeline Implementation
+                </li>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  Git & Version Control
+                </li>
+                <li className='flex items-center'>
+                  <span className='w-2 h-2 bg-purple-400 rounded-full mr-3'></span>
+                  Linux & System Administration
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          {/* Technology Stack */}
+          <div className='text-center mb-12'>
+            <h3 className='text-2xl font-bold mb-4 text-white'>Technology Stack</h3>
+            <p className='text-gray-400'>
+              Core technologies I use to build exceptional digital experiences
+            </p>
+          </div>
+          
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-6'>
+            <TechItem icon={<SiTypescript size={32} className='text-blue-500' />} label='TypeScript' />
+            <TechItem icon={<SiJavascript size={32} className='text-yellow-500' />} label='JavaScript' />
+            <TechItem icon={<SiReact size={32} className='text-blue-400' />} label='React.js' />
+            <TechItem icon={<SiNextdotjs size={32} className='text-white' />} label='Next.js' />
+            <TechItem icon={<SiNodedotjs size={32} className='text-green-600' />} label='Node.js' />
+            <TechItem icon={<SiPostgresql size={32} className='text-blue-600' />} label='PostgreSQL' />
+            <TechItem icon={<SiAmazonwebservices size={32} className='text-orange-500' />} label='AWS' />
+            <TechItem icon={<SiDocker size={32} className='text-blue-400' />} label='Docker' />
+            <TechItem icon={<SiGithub size={32} className='text-white' />} label='Git' />
+            <TechItem icon={<SiTailwindcss size={32} className='text-sky-500' />} label='Tailwind' />
+            <TechItem icon={<SiSwagger size={32} className='text-green-500' />} label='Swagger' />
+            <TechItem icon={<SiVite size={32} className='text-purple-500' />} label='Vite' />
+          </div>
         </section>
 
-        {/* Final Call to Action */}
+        {/* Call to Action - SEO optimized */}
         <section className='text-center mt-10'>
-          <Link
-            href='/projects'
-            className='bg-purple-600 text-white px-10 py-3 rounded-3xl font-bold hover:bg-purple-700 transition'
-          >
-            Explore My Projects
-          </Link>
+          <h2 className='text-2xl font-bold text-purple-400 mb-4'>Ready to Collaborate?</h2>
+          <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
+            I'm always interested in challenging projects and opportunities to create impactful software solutions. Let's discuss how we can work together to bring your ideas to life.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+            <Link
+              href='/contact'
+              className='bg-purple-600 text-white px-8 py-3 rounded-3xl font-bold hover:bg-purple-700 transition inline-flex items-center gap-2'
+            >
+              Get In Touch
+            </Link>
+            <Link
+              href='/resume-suman-dey.pdf'
+              target='_blank'
+              className='border border-purple-600 text-purple-400 px-8 py-3 rounded-3xl font-bold hover:bg-purple-600 hover:text-white transition inline-flex items-center gap-2'
+            >
+              View Resume
+            </Link>
+          </div>
         </section>
       </main>
     </>

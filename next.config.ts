@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    unoptimized: true,
+  },
   // Ensure URLs always end with a trailing slash for consistency
   trailingSlash: true,
 

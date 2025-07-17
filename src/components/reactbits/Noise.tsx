@@ -9,6 +9,7 @@ interface NoiseProps {
   patternRefreshInterval?: number;
   patternAlpha?: number;
   children?: React.ReactNode;
+  className?: string;
 }
 
 const Noise: React.FC<NoiseProps> = ({
@@ -18,6 +19,7 @@ const Noise: React.FC<NoiseProps> = ({
   patternRefreshInterval = 2,
   patternAlpha = 15,
   children,
+  className = '',
 }) => {
   const grainRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -85,7 +87,7 @@ const Noise: React.FC<NoiseProps> = ({
   }, [patternSize, patternScaleX, patternScaleY, patternRefreshInterval, patternAlpha]);
 
   return (
-    <div className='absolute left-0 top-0 w-full h-full'>
+    <div className={`absolute left-0 top-0 w-full ${className || 'h-full'}`}>
       {/* The canvas now ignores pointer events */}
       <canvas
         ref={grainRef}

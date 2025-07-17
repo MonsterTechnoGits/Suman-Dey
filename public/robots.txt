@@ -1,0 +1,44 @@
+User-agent: *
+Allow: /
+
+# Sitemap locations (both dynamic and static)
+Sitemap: https://www.sumandey.com/sitemap.xml
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1
+
+# Specific directives for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Allow access to important resources
+Allow: /suman-dey-image.png
+Allow: /resume-suman-dey.pdf
+Allow: /Suman-Dey-CV.pdf
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+Allow: /*.pdf
+
+# Disallow any admin or private directories (if any)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /_next/static/
+
+# Allow all search engines to index all content
+# This is a public portfolio website for Suman Dey
+# Senior Full Stack Developer & React Expert

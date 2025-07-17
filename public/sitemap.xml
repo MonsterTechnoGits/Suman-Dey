@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://www.sumandey.com/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.sumandey.com/suman-dey-image.png</image:loc>
+      <image:caption>Suman Dey - Senior Full Stack Developer</image:caption>
+      <image:title>Suman Dey Professional Photo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- About Page - High Priority -->
+  <url>
+    <loc>https://www.sumandey.com/about</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.sumandey.com/suman-dey-image.png</image:loc>
+      <image:caption>About Suman Dey - Senior Full Stack Developer Profile</image:caption>
+      <image:title>Suman Dey About Page</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Contact Page - Important for Business -->
+  <url>
+    <loc>https://www.sumandey.com/contact</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.sumandey.com/suman-dey-image.png</image:loc>
+      <image:caption>Contact Suman Dey - Get in Touch</image:caption>
+      <image:title>Contact Suman Dey</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Resume PDF - Important for SEO -->
+  <url>
+    <loc>https://www.sumandey.com/resume-suman-dey.pdf</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Alternative Resume PDF -->
+  <url>
+    <loc>https://www.sumandey.com/Suman-Dey-CV.pdf</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>

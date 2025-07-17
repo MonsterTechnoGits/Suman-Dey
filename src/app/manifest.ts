@@ -1,0 +1,44 @@
+import type { MetadataRoute } from 'next'
+
+// Required for static export
+export const dynamic = 'force-static'
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: 'Suman Dey - Senior Full Stack Developer Portfolio',
+    short_name: 'Suman Dey Portfolio',
+    description: 'Senior Full Stack Developer specializing in React, Node.js, TypeScript and modern web technologies. Portfolio showcasing 7+ years of experience in building scalable web applications.',
+    start_url: '/',
+    display: 'standalone',
+    background_color: '#121212',
+    theme_color: '#8B5CF6',
+    icons: [
+      {
+        src: '/suman-dey-image.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
+    ],
+    orientation: 'portrait-primary',
+    scope: '/',
+    lang: 'en-US',
+    dir: 'ltr',
+    categories: ['business', 'productivity', 'portfolio'],
+    shortcuts: [
+      {
+        name: 'About',
+        short_name: 'About',
+        description: 'Learn more about Suman Dey',
+        url: '/about',
+        icons: [{ src: '/suman-dey-image.png', sizes: '96x96' }],
+      },
+      {
+        name: 'Contact',
+        short_name: 'Contact',
+        description: 'Get in touch with Suman Dey',
+        url: '/contact',
+        icons: [{ src: '/suman-dey-image.png', sizes: '96x96' }],
+      },
+    ],
+  }
+}

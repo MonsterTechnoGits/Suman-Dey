@@ -1,0 +1,13 @@
+Contact: mailto:aboutsumandey@gmail.com
+Contact: https://www.sumandey.com/contact
+Expires: 2025-12-31T23:59:59Z
+Encryption: https://www.sumandey.com/pgp-key.asc
+Preferred-Languages: en, hi, bn
+Canonical: https://www.sumandey.com/.well-known/security.txt
+Policy: https://www.sumandey.com/security-policy
+Hiring: https://www.sumandey.com/contact
+
+# Security contact for Suman Dey Portfolio
+# Professional Full Stack Developer
+# Specializing in React, Node.js, and TypeScript
+# Available for security consulting and development projects

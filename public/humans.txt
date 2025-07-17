@@ -1,0 +1,25 @@
+/* TEAM */
+Developer: Suman Dey
+Role: Senior Full Stack Developer & Tech Lead
+Location: West Bengal, India
+Contact: aboutsumandey@gmail.com
+Website: https://www.sumandey.com
+LinkedIn: https://www.linkedin.com/in/imsumandey/
+GitHub: https://github.com/MonsterTechnoGits
+
+/* SITE */
+Site Name: Suman Dey Portfolio
+Language: English
+Standards: HTML5, CSS3, JavaScript ES6+, TypeScript
+Framework: Next.js 15, React 19
+Styling: Tailwind CSS
+Hosting: Vercel
+Last update: 2025/01/17
+Technologies: React, Node.js, TypeScript, PostgreSQL, AWS
+
+/* THANKS */
+Thanks to the open-source community for amazing tools and libraries
+React Team for the incredible framework
+Next.js Team for the powerful full-stack framework
+Tailwind CSS Team for the utility-first CSS framework
+Vercel Team for seamless deployment platform
