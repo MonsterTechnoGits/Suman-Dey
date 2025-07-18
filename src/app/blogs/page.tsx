@@ -54,7 +54,7 @@ export default function BlogsPage() {
             Blog Coming Soon
           </h1>
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
-            I'm working on creating valuable content about full stack development, modern web technologies, and software engineering best practices.
+            I&apos;m working on creating valuable content about full stack development, modern web technologies, and software engineering best practices.
           </p>
         </div>
 
