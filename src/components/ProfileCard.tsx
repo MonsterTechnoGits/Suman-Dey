@@ -41,19 +41,25 @@ export default function ProfileCard() {
               <a href='https://github.com/imsumandey' target='_blank' rel='noopener noreferrer'>
                 <Icon
                   icon={"mdi:github"}
-                  className='w-5 h-5 sm:w-8 sm:h-8 text-white hover:text-gray-400 transition-colors duration-300'
+                  className='w-5 h-5 sm:w-8 sm:h-8 text-white hover:text-gray-300 transition-colors duration-300'
                 />
               </a>
               <a href='https://www.linkedin.com/in/imsumandey/' target='_blank' rel='noopener noreferrer'>
                 <Icon
                   icon={"mage:linkedin"}
-                  className='w-5 h-5 sm:w-8 sm:h-8 text-white hover:text-gray-400 transition-colors duration-300'
+                  className='w-5 h-5 sm:w-8 sm:h-8 text-white hover:text-blue-500 transition-colors duration-300'
+                />
+              </a>
+              <a href='https://youtube.com/MonsterTechno' target='_blank' rel='noopener noreferrer'>
+                <Icon
+                  icon={"mingcute:youtube-fill"}
+                  className='w-5 h-5 sm:w-8 sm:h-8 text-white hover:text-red-500 transition-colors duration-300'
                 />
               </a>
               <a href='https://www.facebook.com/imsumandey' target='_blank' rel='noopener noreferrer'>
                 <Icon
                   icon={"ic:baseline-facebook"}
-                  className='w-5 h-5 sm:w-8 sm:h-8 text-white hover:text-gray-400 transition-colors duration-300'
+                  className='w-5 h-5 sm:w-8 sm:h-8 text-white hover:text-blue-600 transition-colors duration-300'
                 />
               </a>
             </div>

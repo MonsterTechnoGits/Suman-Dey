@@ -61,4 +61,18 @@
     <priority>0.5</priority>
   </url>
   
+  <!-- Blog Page - Coming Soon -->
+  <url>
+    <loc>https://www.sumandey.com/blogs</loc>
+    <lastmod>2025-01-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.sumandey.com/suman-dey-image.png</image:loc>
+      <image:caption>Suman Dey Technical Blog - Coming Soon</image:caption>
+      <image:title>Suman Dey Blog</image:title>
+    </image:image>
+  </url>
+  
+  
 </urlset>

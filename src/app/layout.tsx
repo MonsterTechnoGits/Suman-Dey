@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "Suman Dey Portfolio",
     images: [
       {
-        url: "/suman-dey-image.png", // Updated to a more descriptive filename
+        url: "https://www.sumandey.com/suman-dey-image.png", // Updated to a more descriptive filename
         width: 1200, // Increased for better quality
         height: 630, // Standard OG image size
         alt: "Suman Dey - Senior Full Stack Developer",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Suman Dey | Senior Full Stack Developer & React Expert",
     description:
       "Senior Full Stack Developer specializing in React, Node.js, and modern JavaScript frameworks. Explore my frontend development and backend projects.",
-    images: ["/suman-dey-image.png"],
+    images: ["https://www.sumandey.com/suman-dey-image.png"],
     creator: "@SumanDey", // Add your Twitter handle if available
   },
   authors: [{ name: "Suman Dey", url: "https://www.sumandey.com" }],
@@ -66,6 +66,9 @@ export const metadata: Metadata = {
     "Next.js Developer",
     "React Native Developer",
     "Modern Web Technologies",
+    "MonsterTechno YouTube",
+    "Tech Tutorial Videos",
+    "Programming Education",
   ],
   creator: "Suman Dey",
   applicationName: "Suman Dey Portfolio",
@@ -126,6 +129,7 @@ const personSchema = {
   sameAs: [
     "https://github.com/MonsterTechnoGits",
     "https://www.linkedin.com/in/imsumandey/",
+    "https://youtube.com/MonsterTechno",
     "https://www.facebook.com/ImSumanDeyy",
     "https://www.instagram.com/ImSumanDey",
   ],

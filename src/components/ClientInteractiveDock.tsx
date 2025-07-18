@@ -20,9 +20,9 @@ export default function ClientInteractiveDock() {
       onClick: () => router.push("/about"),
     },
     {
-      icon: <Icon icon={""} />,
-      label: "Services",
-      onClick: () => router.push("/services"),
+      icon: <Icon icon={"fluent-color:document-text-32"} className='text-white size-6'/>,
+      label: "Blog",
+      onClick: () => router.push("/blogs"),
     },
     {
       icon: <Icon icon={"fluent-color:mail-32"} className='text-white size-6' />,
