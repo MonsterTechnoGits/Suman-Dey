@@ -6,8 +6,8 @@ import ContactForm from "@/components/ContactForm";
 
 // SEO metadata for contact page
 export const metadata: Metadata = {
-  title: "Contact Suman Dey | Senior Full Stack Developer - Get in Touch",
-  description: "Contact Suman Dey for web development projects, consulting, and collaboration opportunities. Senior Full Stack Developer specializing in React, Node.js, and TypeScript. Available for freelance and full-time positions.",
+  title: "Let's Connect! | Contact Suman Dey - Passionate Full Stack Developer",
+  description: "Ready to bring your ideas to life? Let's connect! I'm Suman Dey, a passionate Senior Full Stack Developer who loves creating amazing digital experiences. Available for exciting projects and collaborations using React, Node.js, and TypeScript.",
   keywords: [
     "Contact Suman Dey",
     "Hire Full Stack Developer",
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     "Web Development Consultation",
   ],
   openGraph: {
-    title: "Contact Suman Dey | Senior Full Stack Developer",
-    description: "Get in touch with Suman Dey for web development projects, consulting, and collaboration opportunities. Experienced in React, Node.js, and modern web technologies.",
+    title: "Let's Connect! | Contact Suman Dey - Passionate Full Stack Developer",
+    description: "Ready to create something amazing together? Let's connect! I'm passionate about turning ideas into beautiful, functional digital experiences. Always excited about new projects and collaborations.",
     url: "https://www.sumandey.com/contact",
     type: "website",
     images: [
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
         url: "/suman-dey-image.png",
         width: 1200,
         height: 630,
-        alt: "Contact Suman Dey - Senior Full Stack Developer",
+        alt: "Let's Connect! Contact Suman Dey - Passionate Full Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Suman Dey | Senior Full Stack Developer",
-    description: "Get in touch for web development projects, consulting, and collaboration opportunities.",
+    title: "Let's Connect! | Contact Suman Dey - Passionate Full Stack Developer",
+    description: "Ready to create something amazing together? Let's connect and bring your ideas to life with passion and expertise!",
     images: ["/suman-dey-image.png"],
   },
   alternates: {
@@ -146,14 +146,14 @@ export default function ContactPage() {
         {/* Hero Section */}
         <header className='text-center space-y-6'>
           <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold'>
-            Let&apos;s Build Something <span className='text-purple-400'>Extraordinary</span>
+            Let&apos;s Create Something <span className='text-purple-400'>Amazing Together!</span>
           </h1>
           <div className='max-w-3xl mx-auto space-y-4'>
             <p className='text-xl text-gray-300 leading-relaxed'>
-              Ready to bring your vision to life? I&apos;m passionate about collaborating with teams and individuals to create <strong className='text-white'>innovative solutions</strong> that make a real impact.
+              Hi there! 👋 I&apos;m genuinely excited about the possibility of working together. There&apos;s nothing I love more than collaborating with passionate people to create <strong className='text-white'>digital experiences</strong> that actually make a difference.
             </p>
             <p className='text-lg text-gray-400 leading-relaxed'>
-              Whether you need a complete web application, system architecture consultation, or technical leadership, I&apos;m here to help transform your ideas into reality.
+              Whether you&apos;re dreaming up a complete web application, need some technical guidance, or just want to chat about an idea you&apos;ve been mulling over, I&apos;d love to hear from you. Let&apos;s turn that spark of an idea into something real!
             </p>
           </div>
         </header>
@@ -161,9 +161,9 @@ export default function ContactPage() {
         {/* Contact Information Cards */}
         <section className='w-full max-w-4xl mx-auto'>
           <div className='text-center mb-12'>
-            <h2 className='text-2xl font-bold text-purple-400 mb-4'>Get in Touch</h2>
+            <h2 className='text-2xl font-bold text-purple-400 mb-4'>Ways to Connect</h2>
             <p className='text-gray-400'>
-              Multiple ways to reach me for your project needs
+              Choose whatever feels most comfortable for you - I&apos;m always happy to chat!
             </p>
           </div>
           
@@ -203,10 +203,10 @@ export default function ContactPage() {
         <section className='text-center mt-16'>
           <div className='bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-8 lg:p-12 rounded-2xl border border-gray-700'>
             <h2 className='text-3xl font-bold text-white mb-4'>
-              Ready to Start Your <span className='text-purple-400'>Next Project?</span>
+              Excited to Start Something <span className='text-purple-400'>New Together?</span>
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              I&apos;m available for freelance projects, consulting, and full-time opportunities. Let&apos;s discuss how we can create something amazing together.
+              I&apos;m always open to exciting freelance projects, interesting consulting opportunities, and meaningful collaborations. If you think we&apos;d work well together, let&apos;s make it happen!
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
@@ -215,7 +215,7 @@ export default function ContactPage() {
                 rel='noopener noreferrer'
                 className='inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-500 text-white font-semibold rounded-2xl hover:from-purple-700 hover:to-purple-600 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25'
               >
-                View My Resume
+                Check Out My Resume
               </a>
               <a
                 href='https://www.linkedin.com/in/imsumandey/'
@@ -223,7 +223,7 @@ export default function ContactPage() {
                 rel='noopener noreferrer'
                 className='inline-flex items-center justify-center px-8 py-4 border border-purple-500 text-purple-400 font-semibold rounded-2xl hover:bg-purple-600 hover:text-white transition-all duration-300 hover:scale-105'
               >
-                Connect on LinkedIn
+                Let&apos;s Connect on LinkedIn
               </a>
             </div>
           </div>

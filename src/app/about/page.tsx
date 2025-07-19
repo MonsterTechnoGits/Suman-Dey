@@ -19,11 +19,11 @@ import {
   SiReacthookform,
 } from "react-icons/si";
 
-// SEO-optimized metadata for about page
+// SEO-optimized metadata for about page - Wiki-style for fast indexing
 export const metadata: Metadata = {
-  title: "About Suman Dey | Senior Full Stack Developer & Team Lead at ROITech",
+  title: "About Suman Dey | Passionate Senior Full Stack Developer & Tech Leader",
   description:
-    "Learn about Suman Dey, a Senior Full Stack Developer with 7+ years of experience in React, Node.js, TypeScript, and AWS. Currently Team Lead at ROITech Consulting, specializing in scalable web applications and enterprise solutions.",
+    "Meet Suman Dey - a passionate Senior Full Stack Developer who absolutely loves creating sleek, scalable web applications. With 7+ years crafting digital experiences using React.js, Node.js, and TypeScript, I transform complex challenges into user-friendly solutions.",
   keywords: [
     "Suman Dey About",
     "Senior Full Stack Developer Background",
@@ -39,57 +39,117 @@ export const metadata: Metadata = {
     "Enterprise Software Developer",
     "Tech Lead Experience",
     "Software Architecture Expert",
+    "Suman Dey Wiki",
+    "Full Stack Developer Profile",
+    "Software Engineer Biography",
+    "React.js Expert",
+    "Web Developer Portfolio",
   ],
   openGraph: {
-    title: "About Suman Dey | Senior Full Stack Developer & Team Lead",
+    title: "About Suman Dey | Passionate Senior Full Stack Developer & Tech Leader",
     description:
-      "Discover the journey of Suman Dey, a Senior Full Stack Developer with expertise in React, Node.js, and modern web technologies. Learn about his 7+ years of experience and leadership at ROITech Consulting.",
+      "Discover the journey of Suman Dey - a passionate developer who transforms complex challenges into user-friendly solutions. From curiosity-driven beginnings to leading tech teams, explore his 7+ years of crafting digital experiences.",
     url: "https://www.sumandey.com/about",
     type: "profile",
+    siteName: "Suman Dey - Full Stack Developer",
+    locale: "en_US",
     images: [
       {
         url: "/suman-dey-image.png",
         width: 1200,
         height: 630,
-        alt: "Suman Dey - Senior Full Stack Developer About Page",
+        alt: "Suman Dey - Passionate Senior Full Stack Developer About Page",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Suman Dey | Senior Full Stack Developer & Team Lead",
+    title: "About Suman Dey | Passionate Senior Full Stack Developer & Tech Leader", 
     description:
-      "Learn about Suman Dey's journey as a Senior Full Stack Developer with expertise in React, Node.js, and modern web technologies.",
+      "Meet Suman Dey - passionate about crafting digital experiences that solve real problems. Discover his journey from curious kid to senior developer leading teams.",
     images: ["/suman-dey-image.png"],
+    creator: "@sumandey",
+    site: "@sumandey",
   },
   alternates: {
     canonical: "https://www.sumandey.com/about",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  authors: [{ name: "Suman Dey", url: "https://www.sumandey.com" }],
+  creator: "Suman Dey",
+  publisher: "Suman Dey",
+  category: "Technology",
+  classification: "Professional Profile",
+  other: {
+    "article:author": "Suman Dey",
+    "article:section": "Technology",
+    "profile:first_name": "Suman",
+    "profile:last_name": "Dey",
+    "profile:username": "sumandey",
+  },
 };
 
-// Structured data for about page
+// Enhanced structured data for wiki-style indexing
 const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
   name: "About Suman Dey",
+  headline: "Suman Dey - Passionate Senior Full Stack Developer & Tech Leader",
   description:
-    "Learn about Suman Dey, a Senior Full Stack Developer with 7+ years of experience in React, Node.js, TypeScript, and AWS.",
+    "Meet Suman Dey - a passionate developer who transforms complex challenges into user-friendly solutions. Discover his journey from curious beginnings to tech leadership.",
   url: "https://www.sumandey.com/about",
+  dateModified: new Date().toISOString(),
+  datePublished: "2024-01-01T00:00:00Z",
+  author: {
+    "@type": "Person",
+    name: "Suman Dey",
+    url: "https://www.sumandey.com",
+  },
+  publisher: {
+    "@type": "Person",
+    name: "Suman Dey",
+    url: "https://www.sumandey.com",
+  },
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Suman Dey Portfolio",
+    url: "https://www.sumandey.com",
+  },
   mainEntity: {
     "@type": "Person",
     "@id": "https://www.sumandey.com/#person",
     name: "Suman Dey",
-    jobTitle: "Senior Full Stack Developer",
+    alternateName: ["Suman", "SumanDey"],
+    jobTitle: ["Senior Full Stack Developer", "Team Lead", "Technical Architect"],
     description:
-      "Senior Full Stack Developer with 7+ years of experience specializing in React, Node.js, TypeScript, and modern web technologies. Currently serving as Team Lead at ROITech Consulting.",
+      "Passionate Senior Full Stack Developer who absolutely loves crafting digital experiences. With 7+ years transforming complex challenges into user-friendly solutions using React, Node.js, and TypeScript. Currently leading teams at ROITech Consulting.",
+    url: "https://www.sumandey.com",
+    sameAs: [
+      "https://linkedin.com/in/sumandey",
+      "https://github.com/sumandey",
+      "https://twitter.com/sumandey",
+    ],
     worksFor: {
       "@type": "Organization",
       name: "ROITech Consulting",
       url: "https://www.roitech.biz",
+      department: "Software Development",
     },
     knowsAbout: [
       "React.js Development",
-      "Node.js Backend Development",
+      "Node.js Backend Development", 
       "TypeScript Programming",
       "JavaScript Frameworks",
       "AWS Cloud Services",
@@ -98,12 +158,44 @@ const aboutPageSchema = {
       "Team Leadership",
       "CI/CD Pipelines",
       "Enterprise Software",
+      "Software Engineering",
+      "Web Development",
+      "API Development",
+      "Database Design",
+      "System Architecture",
+      "DevOps",
+      "Agile Development",
+      "Code Review",
+      "Technical Leadership",
     ],
     hasOccupation: {
       "@type": "Occupation",
       name: "Full Stack Developer",
       occupationalCategory: "Software Engineering",
+      responsibilities: [
+        "Full-stack web application development",
+        "Team leadership and mentorship",
+        "System architecture design",
+        "Code review and quality assurance",
+        "DevOps and deployment automation",
+      ],
     },
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "Computer Science Education",
+    },
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "7+ Years Full Stack Development Experience",
+        credentialCategory: "Professional Experience",
+      },
+      {
+        "@type": "EducationalOccupationalCredential", 
+        name: "Team Leadership Experience",
+        credentialCategory: "Management",
+      },
+    ],
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -121,6 +213,10 @@ const aboutPageSchema = {
         item: "https://www.sumandey.com/about",
       },
     ],
+  },
+  speakableSpecification: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "h2", ".highlight"],
   },
 };
 
@@ -193,61 +289,61 @@ export default function AboutPage() {
       
       <main className='w-full h-full flex flex-col gap-14 text-white'>
         {/* Hero Section with SEO-optimized headings */}
-        <header className='text-center'>
-          <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-3'>
+        <header className='text-center' itemScope itemType="https://schema.org/Person">
+          <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-3' itemProp="name">
             About <span className='text-purple-400'>Suman Dey</span>
           </h1>
-          <p className='text-lg text-gray-400 max-w-2xl mx-auto'>
-            Senior Full Stack Developer with 7+ years of experience building scalable web applications with React, Node.js, and modern technologies
+          <p className='text-lg text-gray-400 max-w-2xl mx-auto' itemProp="description">
+            Passionate Senior Full Stack Developer who loves crafting digital experiences that solve real problems - transforming complex challenges into elegant solutions for over 7 years
           </p>
         </header>
 
-        {/* Professional Summary - SEO optimized */}
+        {/* Professional Summary - Humanized and Professional */}
         <section className='max-w-4xl mx-auto space-y-6' itemScope itemType="https://schema.org/Person">
-          <h2 className='text-2xl font-bold text-purple-400 mb-4 sr-only'>Professional Background</h2>
+          <h2 className='text-2xl font-bold text-purple-400 mb-4'>Who I Am</h2>
           <div className='text-lg text-gray-300 leading-relaxed'>
-            <p>
-              I&apos;m <strong className='text-white' itemProp="name">Suman Dey</strong>, a{" "}
-              <span className='text-purple-400 font-medium' itemProp="jobTitle">Senior Full Stack Developer</span> with over{" "}
-              <strong>7 years</strong> of hands-on experience building and scaling secure,
-              high-performing web applications using cutting-edge technologies including <strong>React.js</strong>, <strong>Node.js</strong>, and <strong>TypeScript</strong>.
+            <p itemProp="description">
+              Hi there! I&apos;m <strong className='text-white' itemProp="name">Suman Dey</strong>, a passionate{" "}
+              <span className='text-purple-400 font-medium' itemProp="jobTitle">Senior Full Stack Developer</span> who absolutely loves what I do. For over{" "}
+              <strong>7 years</strong>, I&apos;ve been crafting digital experiences that not only look great but perform exceptionally well. My journey has taken me deep into the world of modern web technologies, with <strong itemProp="knowsAbout">React.js</strong>, <strong itemProp="knowsAbout">Node.js</strong>, and <strong itemProp="knowsAbout">TypeScript</strong> becoming my trusted companions along the way.
             </p>
             <p className='mt-4'>
-              Specializing in modern JavaScript frameworks, I excel at creating responsive user interfaces with <strong>React.js</strong>,{" "}
-              <strong>React Hook Form</strong>, and <strong>React Query</strong>, while architecting robust backend systems using{" "}
-              <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>PostgreSQL</strong>. My focus is on building solutions that are performant, scalable, and maintainable.
+              What drives me every day is the opportunity to transform complex business challenges into elegant, user-friendly solutions. Whether I&apos;m building intuitive interfaces with <strong itemProp="knowsAbout">React.js</strong> and modern tools like{" "}
+              <strong itemProp="knowsAbout">React Hook Form</strong>, or architecting scalable backend systems with{" "}
+              <strong itemProp="knowsAbout">Node.js</strong> and <strong itemProp="knowsAbout">PostgreSQL</strong>, I always keep the end user in mind. After all, technology should make life easier, not more complicated.
             </p>
             <p className='mt-4'>
-              Currently serving as <strong>Team Lead & Technical Architect</strong> at{" "}
+              In my current role as <strong>Team Lead & Technical Architect</strong> at{" "}
               <span itemProp="worksFor" itemScope itemType="https://schema.org/Organization">
                 <strong itemProp="name">ROITech Consulting</strong>
-              </span>, I&apos;ve successfully delivered enterprise-grade systems, including high-performance resume search engines using PostgreSQL trigram indexes, and designed automated workflows for PDF/Excel processing and system integrations.
+              </span>, I&apos;ve had the privilege of leading talented teams and delivering some really exciting projects. From building lightning-fast search engines using <strong itemProp="knowsAbout">PostgreSQL trigram indexes</strong> to creating seamless automation workflows, every project teaches me something new and pushes me to grow.
             </p>
             <p className='mt-4'>
-              My expertise extends to cloud technologies with <strong>AWS</strong> (S3, EC2), implementing <strong>CI/CD pipelines</strong>, and developing hybrid mobile applications using <strong>SAPUI5</strong>, <strong>Cordova</strong>, and <strong>Firebase</strong>. I&apos;m passionate about leveraging modern development practices to create scalable, production-ready applications.
+              Beyond the core development work, I&apos;m genuinely fascinated by the entire ecosystem of modern software development. Cloud technologies with <strong itemProp="knowsAbout">AWS</strong>, streamlined <strong itemProp="knowsAbout">CI/CD pipelines</strong>, and even mobile development using <strong itemProp="knowsAbout">SAPUI5</strong> and <strong itemProp="knowsAbout">Firebase</strong> - each piece of the puzzle contributes to creating something meaningful. What excites me most is seeing how these technologies come together to solve real problems for real people.
             </p>
           </div>
         </section>
 
-        {/* Professional Journey - Enhanced for SEO */}
+        {/* Personal Development Journey */}
         <section className='max-w-4xl mx-auto space-y-4 text-lg text-gray-300 leading-relaxed'>
-          <h2 className='text-2xl font-bold text-purple-400 mb-4'>My Development Journey</h2>
+          <h2 className='text-2xl font-bold text-purple-400 mb-4'>How It All Started</h2>
           <p>
-            My journey in software development began with curiosity and a basic PC with dial-up internet. I still remember the excitement of creating my first interactive login form with HTML and JavaScript — each successfully resolved bug felt like solving a complex puzzle that fueled my passion for programming.
+            Picture this: a curious kid with a basic PC and painfully slow dial-up internet, spending hours trying to figure out why his HTML wasn&apos;t working. That was me about a decade ago! I still get that same rush of excitement when I remember creating my first interactive login form - it was just HTML and JavaScript, but when it actually worked, I felt like I had unlocked some kind of superpower. Every bug I fixed felt like solving a mystery, and honestly, that feeling hasn&apos;t changed much.
           </p>
           <p>
-            This initial curiosity evolved into expertise in full-stack development, where I discovered my strength in creating seamless user experiences through frontend technologies like <strong>React.js</strong> and <strong>TypeScript</strong>, while architecting scalable backend systems. As a self-motivated learner, I&apos;ve dedicated countless hours mastering advanced concepts like Node.js multi-threading and React&apos;s reconciliation algorithm to optimize application performance.
+            What started as weekend tinkering gradually became my life&apos;s passion. I found myself naturally gravitating toward creating smooth, intuitive user experiences with <strong>React.js</strong> and <strong>TypeScript</strong> on the frontend, while getting equally excited about building the robust systems that power them behind the scenes. There&apos;s something deeply satisfying about creating something that works beautifully both for the person clicking buttons and for the servers handling thousands of requests.
           </p>
           <p>
-            Throughout my career, I&apos;ve navigated high-pressure production environments, managed complex system refactors, and led development teams through challenging projects. The satisfaction of launching applications that perform reliably under real-world conditions drives my commitment to quality code and robust architecture.
+            The real learning happened when I started facing those 2 AM production issues (we&apos;ve all been there, right?). Nothing teaches you about system architecture like debugging a performance bottleneck when users are depending on your application. Those high-pressure moments, the complex refactoring projects, and the responsibility of leading teams through tough technical challenges - they&apos;ve all shaped how I approach development today.
           </p>
           <p>
-            What motivates me most isn&apos;t just the technology — it&apos;s the impact on users and the trust that teams place in well-engineered systems. This responsibility drives me to write clean, maintainable code and mentor fellow developers in best practices.
+            But here&apos;s what really keeps me going: it&apos;s not just about writing clever code or using the latest framework. It&apos;s about the moment when someone tells you that the application you built actually made their work easier, or when a team member you&apos;ve mentored solves a problem in a way that makes you proud. Technology is just a tool - the real magic happens when that tool helps real people do amazing things.
           </p>
         </section>
 
+      
         {/* Professional Experience - Modern & Professional */}
-        <section className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <section className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8' itemScope itemType="https://schema.org/WorkHistory">
           <div className='text-center mb-16'>
             <h2 className='text-3xl font-bold mb-4 text-purple-400'>Professional Experience</h2>
             <p className='text-gray-400 max-w-2xl mx-auto'>
@@ -382,7 +478,7 @@ export default function AboutPage() {
         </section>
 
         {/* Technical Achievements - Modern Vertical List */}
-        <section className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <section className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8' itemScope itemType="https://schema.org/ItemList">
           <div className='text-center mb-16'>
             <h2 className='text-3xl font-bold mb-4 text-purple-400'>Key Technical Achievements</h2>
             <p className='text-gray-400 max-w-2xl mx-auto'>
@@ -440,7 +536,7 @@ export default function AboutPage() {
         </section>
 
         {/* Technical Skills - Modern & Professional */}
-        <section className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <section className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8' itemScope itemType="https://schema.org/ItemList">
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold mb-4 text-purple-400'>Technical Expertise</h2>
             <p className='text-gray-400 max-w-2xl mx-auto'>
@@ -546,7 +642,7 @@ export default function AboutPage() {
           
           {/* Technology Stack */}
           <div className='text-center mb-12'>
-            <h3 className='text-2xl font-bold mb-4 text-white'>Technology Stack</h3>
+            <h3 className='text-2xl font-bold mb-4 text-white' id="technology-stack">Technology Stack</h3>
             <p className='text-gray-400'>
               Core technologies I use to build exceptional digital experiences
             </p>
@@ -569,7 +665,7 @@ export default function AboutPage() {
         </section>
 
         {/* Call to Action - SEO optimized */}
-        <section className='text-center mt-10'>
+        <section className='text-center mt-10' itemScope itemType="https://schema.org/ContactPoint">
           <h2 className='text-2xl font-bold text-purple-400 mb-4'>Ready to Collaborate?</h2>
           <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
             I&apos;m always interested in challenging projects and opportunities to create impactful software solutions. Let&apos;s discuss how we can work together to bring your ideas to life.

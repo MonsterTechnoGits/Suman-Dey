@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import CountUp from "@/components/reactbits/CountUp";
 import Link from "next/link";
 import RotatingText from "@/components/reactbits/RotatingText";
+import ScrollAnimatedSection from "@/components/ScrollAnimatedSection";
 import {
   SiReact,
   SiNodedotjs,
@@ -15,16 +16,34 @@ import {
 
 // SEO metadata for homepage
 export const metadata: Metadata = {
-  title: "Suman Dey | Senior Full Stack Developer & React Expert",
+  title: "Suman Dey | Senior Full Stack Developer & Modern Web Solutions Expert",
   description:
-    "Senior Full Stack Developer Suman Dey specializes in React, Node.js, TypeScript and modern JavaScript frameworks. 7+ years of experience building scalable web applications.",
+    "Passionate Senior Full Stack Developer with 7+ years of experience building sleek, scalable web applications. Expert in React.js, Node.js, TypeScript, and modern cloud technologies. Creating high-performance, user-friendly digital solutions.",
   openGraph: {
-    title: "Suman Dey | Senior Full Stack Developer & React Expert",
+    title: "Suman Dey | Senior Full Stack Developer & Modern Web Solutions Expert",
     description:
-      "Senior Full Stack Developer specializing in React, Node.js, TypeScript and modern JavaScript frameworks. View portfolio showcasing frontend development, backend architecture and full-stack projects.",
+      "Passionate Senior Full Stack Developer with 7+ years building sleek, scalable web applications. Specializing in React.js, Node.js, TypeScript & modern cloud technologies. View portfolio of high-performance digital solutions.",
     url: "https://www.sumandey.com",
     type: "website",
+    siteName: "Suman Dey Portfolio",
   },
+  keywords: [
+    "Suman Dey",
+    "Senior Full Stack Developer",
+    "React.js Developer",
+    "Node.js Expert",
+    "TypeScript Specialist",
+    "Modern Web Solutions",
+    "Scalable Web Applications",
+    "High-Performance Applications",
+    "Cloud Technologies",
+    "Digital Solutions",
+    "Frontend Development",
+    "Backend Architecture",
+    "Full Stack Engineer",
+    "JavaScript Expert",
+    "Web Application Developer",
+  ],
   alternates: {
     canonical: "https://www.sumandey.com",
   },
@@ -97,20 +116,23 @@ export default function Home() {
             />
           </h1>
 
-          <div className='max-w-3xl space-y-4'>
+          <div className='space-y-4'>
             <p className='text-xl text-gray-300 leading-relaxed'>
-              I am a passionate <strong className='text-white'>Senior Full Stack Developer</strong>{" "}
-              with over <strong className='text-purple-400'>7 years of experience</strong> building
-              sleek, scalable web applications. My expertise lies in creating high-performance,
-              user-friendly digital solutions that merge modern design with robust backend
-              functionality.
+              Hey there! 👋 I&apos;m a passionate{" "}
+              <strong className='text-white'>Senior Full Stack Developer</strong> who&apos;s been
+              crafting digital experiences for over{" "}
+              <strong className='text-purple-400'>7 years</strong>. What I love most? Taking complex
+              ideas and turning them into sleek, scalable web applications that people actually
+              enjoy using. There&apos;s something magical about merging beautiful design with
+              rock-solid backend functionality.
             </p>
             <p className='text-lg text-gray-400 leading-relaxed'>
-              Specializing in <strong className='text-white'>React.js</strong>,{" "}
+              My playground includes <strong className='text-white'>React.js</strong>,{" "}
               <strong className='text-white'>Node.js</strong>,{" "}
-              <strong className='text-white'>TypeScript</strong>, and modern cloud technologies, I
-              craft intuitive user experiences and solve complex technical challenges with clean,
-              efficient code.
+              <strong className='text-white'>TypeScript</strong>, and modern cloud technologies.
+              Whether I&apos;m building intuitive user interfaces or solving those tricky backend
+              puzzles, I&apos;m all about writing clean, efficient code that makes both users and
+              fellow developers happy.
             </p>
           </div>
         </div>
@@ -133,84 +155,131 @@ export default function Home() {
       </section>
 
       {/* Stats Section - Enhanced */}
-      <section className='w-full'>
-        <div className='text-center mb-12'>
-          <h2 className='text-2xl font-bold text-purple-400 mb-4'>Professional Impact</h2>
-          <p className='text-gray-400 max-w-2xl mx-auto'>
-            Delivering measurable results through technical excellence and innovative solutions
-          </p>
-        </div>
+      <ScrollAnimatedSection animationType='fadeInUp' threshold={0.2}>
+        <section className='w-full'>
+          <div className='text-center mb-12'>
+            <h2 className='text-2xl font-bold text-purple-400 mb-4'>Professional Impact</h2>
+            <p className='text-gray-400 max-w-2xl mx-auto'>
+              Delivering measurable results through technical excellence and innovative solutions
+            </p>
+          </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-          <StatCard
-            value={7}
-            label='Years of Experience'
-            description='Full-stack development expertise across multiple technologies'
-          />
-          <StatCard
-            value={50}
-            label='Successful Deployments'
-            description='Production-ready applications delivered on time'
-          />
-          <StatCard
-            value={15}
-            label='Technologies Mastered'
-            description='Modern frameworks and tools in my arsenal'
-          />
-        </div>
-      </section>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <ScrollAnimatedSection animationType='slideUp' delay={100}>
+              <StatCard
+                value={7}
+                label='Years of Experience'
+                description='Building sleek, scalable web applications with modern technologies'
+              />
+            </ScrollAnimatedSection>
+            <ScrollAnimatedSection animationType='slideUp' delay={200}>
+              <StatCard
+                value={100}
+                label='Projects Delivered'
+                description='High-performance, user-friendly digital solutions created'
+              />
+            </ScrollAnimatedSection>
+            <ScrollAnimatedSection animationType='slideUp' delay={300}>
+              <StatCard
+                value={20}
+                label='Technologies Mastered'
+                description='Modern frameworks, cloud technologies, and development tools'
+              />
+            </ScrollAnimatedSection>
+          </div>
+        </section>
+      </ScrollAnimatedSection>
 
       {/* Core Technologies */}
-      <section className='w-full'>
-        <div className='text-center mb-12'>
-          <h2 className='text-2xl font-bold text-purple-400 mb-4'>Core Technologies</h2>
-          <p className='text-gray-400'>
-            Building exceptional applications with industry-leading tools
-          </p>
-        </div>
+      <ScrollAnimatedSection animationType='fadeInUp' threshold={0.2}>
+        <section className='w-full'>
+          <div className='text-center mb-12'>
+            <h2 className='text-2xl font-bold text-purple-400 mb-4'>Core Technologies</h2>
+            <p className='text-gray-400'>
+              Building exceptional applications with industry-leading tools
+            </p>
+          </div>
 
-        <div className='grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4'>
-          <TechIcon icon={<SiReact size={32} />} label='React.js' />
-          <TechIcon icon={<SiNodedotjs size={32} />} label='Node.js' />
-          <TechIcon icon={<SiTypescript size={32} />} label='TypeScript' />
-          <TechIcon icon={<SiJavascript size={32} />} label='JavaScript' />
-          <TechIcon icon={<SiPostgresql size={32} />} label='PostgreSQL' />
-          <TechIcon icon={<SiAmazonwebservices size={32} />} label='AWS' />
-          <TechIcon icon={<SiDocker size={32} />} label='Docker' />
-          <TechIcon icon={<SiGithub size={32} />} label='Git' />
-        </div>
-      </section>
+          <div className='grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4'>
+            {[
+              { icon: <SiReact size={32} />, label: "React.js" },
+              { icon: <SiNodedotjs size={32} />, label: "Node.js" },
+              { icon: <SiTypescript size={32} />, label: "TypeScript" },
+              { icon: <SiJavascript size={32} />, label: "JavaScript" },
+              { icon: <SiPostgresql size={32} />, label: "PostgreSQL" },
+              { icon: <SiAmazonwebservices size={32} />, label: "AWS" },
+              { icon: <SiDocker size={32} />, label: "Docker" },
+              { icon: <SiGithub size={32} />, label: "Git" },
+            ].map((tech, index) => (
+              <ScrollAnimatedSection
+                key={tech.label}
+                animationType='scale'
+                delay={index * 50}
+                threshold={0.1}
+              >
+                <TechIcon icon={tech.icon} label={tech.label} />
+              </ScrollAnimatedSection>
+            ))}
+          </div>
+        </section>
+      </ScrollAnimatedSection>
 
       {/* Professional Focus */}
-      <section className='w-full'>
-        <div className='bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-8 lg:p-12 rounded-2xl border border-gray-700'>
-          <div className='max-w-4xl mx-auto text-center space-y-6'>
-            <h2 className='text-3xl font-bold text-white'>
-              Ready to Build Something <span className='text-purple-400'>Extraordinary?</span>
-            </h2>
-            <p className='text-xl text-gray-300 leading-relaxed'>
-              I&apos;m passionate about collaborating with teams and individuals to create innovative
-              solutions that make a real impact. Whether you need a complete web application, system
-              architecture, or technical consultation, I&apos;m here to help bring your vision to life.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center pt-6 relative z-10'>
-              <Link
-                href='/contact'
-                className='relative inline-flex items-center justify-center px-10 py-4 bg-purple-600 text-white font-bold rounded-2xl hover:bg-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 cursor-pointer'
-              >
-                Start a Project
-              </Link>
-              <Link
-                href='/resume-suman-dey.pdf'
-                target='_blank'
-                className='relative inline-flex items-center justify-center px-10 py-4 border border-purple-600 text-purple-400 font-bold rounded-2xl hover:bg-purple-600 hover:text-white transition-all duration-300 hover:scale-105 cursor-pointer'
-              >
-                View Resume
-              </Link>
+      <ScrollAnimatedSection animationType='fadeInUp' threshold={0.2}>
+        <section className='w-full'>
+          <div className='bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-8 lg:p-12 rounded-2xl border border-gray-700'>
+            <div className='max-w-4xl mx-auto text-center space-y-6'>
+              <h2 className='text-3xl font-bold text-white'>
+                Transform Your Ideas Into <span className='text-purple-400'>Digital Reality</span>
+              </h2>
+              <p className='text-xl text-gray-300 leading-relaxed'>
+                As a passionate Senior Full Stack Developer, I specialize in creating
+                high-performance, user-friendly digital solutions that merge modern design with
+                robust backend functionality. From scalable web applications to complex technical
+                challenges, I deliver clean, efficient code that brings your vision to life with
+                exceptional user experiences.
+              </p>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-3xl mx-auto mb-8'>
+                <ScrollAnimatedSection animationType='slideLeft' delay={200}>
+                  <div className='space-y-2'>
+                    <h3 className='text-lg font-semibold text-purple-400'>Frontend Excellence</h3>
+                    <p className='text-gray-400'>
+                      React.js, TypeScript, and modern UI/UX design creating intuitive user
+                      interfaces
+                    </p>
+                  </div>
+                </ScrollAnimatedSection>
+                <ScrollAnimatedSection animationType='slideRight' delay={300}>
+                  <div className='space-y-2'>
+                    <h3 className='text-lg font-semibold text-purple-400'>Backend Architecture</h3>
+                    <p className='text-gray-400'>
+                      Node.js, cloud technologies, and scalable system design for robust
+                      functionality
+                    </p>
+                  </div>
+                </ScrollAnimatedSection>
+              </div>
+              <ScrollAnimatedSection animationType='fadeIn' delay={400}>
+                <div className='flex flex-col sm:flex-row gap-4 justify-center pt-6 relative z-10'>
+                  <Link
+                    href='/contact'
+                    className='relative inline-flex items-center justify-center px-10 py-4 bg-purple-600 text-white font-bold rounded-2xl hover:bg-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 cursor-pointer'
+                  >
+                    Start a Project
+                  </Link>
+                  <Link
+                    href='/resume-suman-dey.pdf'
+                    target='_blank'
+                    className='relative inline-flex items-center justify-center px-10 py-4 border border-purple-600 text-purple-400 font-bold rounded-2xl hover:bg-purple-600 hover:text-white transition-all duration-300 hover:scale-105 cursor-pointer'
+                  >
+                    View Resume
+                  </Link>
+                </div>
+              </ScrollAnimatedSection>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollAnimatedSection>
     </main>
   );
 }

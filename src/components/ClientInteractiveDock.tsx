@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Dock from "@/components/reactbits/Dock";
 
-
 export default function ClientInteractiveDock() {
   const router = useRouter();
 
@@ -15,14 +14,24 @@ export default function ClientInteractiveDock() {
       onClick: () => router.push("/"),
     },
     {
-      icon: <Icon icon={"fluent-color:text-bullet-list-square-sparkle-32"} className='text-white size-6'/>,
+      icon: (
+        <Icon
+          icon={"fluent-color:text-bullet-list-square-sparkle-32"}
+          className='text-white size-6'
+        />
+      ),
       label: "About",
       onClick: () => router.push("/about"),
     },
     {
-      icon: <Icon icon={"fluent-color:document-text-32"} className='text-white size-6'/>,
+      icon: <Icon icon={"fluent-color:document-text-32"} className='text-white size-6' />,
       label: "Blog",
       onClick: () => router.push("/blogs"),
+    },
+    {
+      icon: <img src='/monster-techno-logo.png' alt='Monster Techno' className='size-6' />,
+      label: "Monster Techno",
+      onClick: () => router.push("/monster-techno"),
     },
     {
       icon: <Icon icon={"fluent-color:mail-32"} className='text-white size-6' />,
@@ -32,12 +41,14 @@ export default function ClientInteractiveDock() {
   ];
 
   return (
-    <Dock
-      items={items}
-      panelHeight={68}
-      baseItemSize={50}
-      magnification={70}
-      className='absolute bottom-0'
-    />
+    <div className='dock-container overflow-hidden absolute left-1/2 bottom-0 transform -translate-x-1/2'>
+      <Dock
+        items={items}
+        panelHeight={68}
+        baseItemSize={50}
+        magnification={70}
+        className='absolute bottom-0'
+      />
+    </div>
   );
 }

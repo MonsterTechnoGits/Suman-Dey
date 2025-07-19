@@ -123,4 +123,115 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Modern Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #9333ea 100%);
+    border-radius: 12px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: all 0.3s ease;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 50%, #7c3aed 100%);
+    transform: scale(1.1);
+  }
+  
+  ::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 50%, #6d28d9 100%);
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  
+  /* Firefox Scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #8b5cf6 transparent;
+  }
+  
+  /* Enhanced smooth scrolling behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Advanced smooth scrolling for main content areas */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+  }
+  
+  /* Enhanced scroll container with momentum */
+  .scroll-container {
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
+    will-change: scroll-position;
+  }
+  
+  /* Scroll-based animations */
+  @keyframes scrollFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .scroll-fade-in {
+    animation: scrollFadeIn 0.6s ease-out forwards;
+  }
+  
+  /* Scroll momentum improvements */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Custom scrollbar for dark theme areas */
+  .scrollbar-dark::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.8) 0%, rgba(168, 85, 247, 0.9) 50%, rgba(147, 51, 234, 0.8) 100%);
+  }
+  
+  .scrollbar-dark::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.9) 0%, rgba(139, 92, 246, 1) 50%, rgba(124, 58, 237, 0.9) 100%);
+  }
+  
+  /* Hide scrollbars for dock and dock-related containers */
+  .dock-container,
+  .dock-container *,
+  [role="toolbar"],
+  [role="toolbar"] * {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  
+  .dock-container::-webkit-scrollbar,
+  .dock-container *::-webkit-scrollbar,
+  [role="toolbar"]::-webkit-scrollbar,
+  [role="toolbar"] *::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  
+  /* Ensure dock area doesn't create unnecessary overflow */
+  .dock-container {
+    overflow: visible !important;
+  }
 }

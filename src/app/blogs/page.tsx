@@ -51,41 +51,41 @@ export default function BlogsPage() {
         <div className="mb-12">
           <Icon icon="material-symbols:edit-document-outline" className="text-white/60 text-8xl mx-auto mb-8" />
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Blog Coming Soon
+            My Blog is Coming Soon!
           </h1>
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
-            I&apos;m working on creating valuable content about full stack development, modern web technologies, and software engineering best practices.
+            I&apos;m really excited to share my thoughts and experiences about full stack development, the latest web technologies, and all the lessons I&apos;ve learned along the way. Stay tuned!
           </p>
         </div>
 
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">What to Expect</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">What I&apos;m Planning to Share</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="text-left">
-              <h3 className="text-lg font-semibold text-blue-300 mb-3">Technical Deep Dives</h3>
+              <h3 className="text-lg font-semibold text-blue-300 mb-3">Behind-the-Scenes Stories</h3>
               <ul className="text-gray-300 space-y-2">
-                <li>• React & Node.js best practices</li>
-                <li>• PostgreSQL performance optimization</li>
-                <li>• Modern JavaScript frameworks</li>
-                <li>• Full stack architecture patterns</li>
+                <li>• Real challenges I&apos;ve faced with React & Node.js</li>
+                <li>• How I optimize PostgreSQL for better performance</li>
+                <li>• My take on the latest JavaScript frameworks</li>
+                <li>• Architecture decisions that actually work</li>
               </ul>
             </div>
             <div className="text-left">
-              <h3 className="text-lg font-semibold text-green-300 mb-3">Practical Tutorials</h3>
+              <h3 className="text-lg font-semibold text-green-300 mb-3">Hands-On Learning</h3>
               <ul className="text-gray-300 space-y-2">
-                <li>• Step-by-step project guides</li>
-                <li>• Real-world problem solving</li>
-                <li>• Code examples and demos</li>
-                <li>• Industry insights and tips</li>
+                <li>• Projects we&apos;ll build together step-by-step</li>
+                <li>• How I solve tricky problems in my daily work</li>
+                <li>• Code examples from real projects</li>
+                <li>• Honest insights about working in tech</li>
               </ul>
             </div>
           </div>
         </div>
 
         <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl p-8 border border-white/10">
-          <h3 className="text-xl font-bold text-white mb-4">Stay Connected</h3>
+          <h3 className="text-xl font-bold text-white mb-4">Let&apos;s Stay Connected!</h3>
           <p className="text-gray-300 mb-6">
-            In the meantime, check out my YouTube channel for video tutorials and follow me on social media for updates.
+            While I&apos;m putting together the blog, you can catch me on YouTube where I share video tutorials, or connect with me on social media. I love chatting with fellow developers!
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
