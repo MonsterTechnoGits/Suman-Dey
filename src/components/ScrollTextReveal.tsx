@@ -71,7 +71,7 @@ const ScrollTextReveal: React.FC<ScrollTextRevealProps> = ({
     const progress = Math.max(0, scrollProgress - (index / totalChars) * 0.5);
     
     let transform = '';
-    let opacity = isVisible ? Math.min(progress * 2, 1) : 0;
+    const opacity = isVisible ? Math.min(progress * 2, 1) : 0;
 
     switch (direction) {
       case 'up':

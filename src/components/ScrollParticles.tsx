@@ -29,7 +29,7 @@ const ScrollParticles: React.FC<ScrollParticlesProps> = ({
   const particlesRef = useRef<Particle[]>([]);
   const scrollVelocityRef = useRef(0);
   const lastScrollTopRef = useRef(0);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | undefined>(undefined);
 
   const createParticle = useCallback((x?: number, y?: number): Particle => {
     const canvas = canvasRef.current;

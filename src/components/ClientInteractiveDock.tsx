@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import Image from "next/image";
 import Dock from "@/components/reactbits/Dock";
 
 export default function ClientInteractiveDock() {
@@ -29,7 +30,7 @@ export default function ClientInteractiveDock() {
       onClick: () => router.push("/blogs"),
     },
     {
-      icon: <img src='/monster-techno-logo.png' alt='Monster Techno' className='size-6' />,
+      icon: <Image src='/monster-techno-logo.png' alt='Monster Techno' width={24} height={24} className='size-6' />,
       label: "Monster Techno",
       onClick: () => router.push("/monster-techno"),
     },

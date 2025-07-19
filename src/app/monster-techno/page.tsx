@@ -9,8 +9,6 @@ import {
   SiNodedotjs,
   SiTypescript,
   SiJavascript,
-  SiNextdotjs,
-  SiTailwindcss,
 } from "react-icons/si";
 
 // SEO-optimized metadata for Monster Techno page
@@ -286,7 +284,7 @@ export default function MonsterTechnoPage() {
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold mb-4 text-purple-400'>Technology Focus</h2>
             <p className='text-gray-400'>
-              Modern technologies and frameworks that power today's web applications
+              Modern technologies and frameworks that power today&apos;s web applications
             </p>
           </div>
           
@@ -437,7 +435,7 @@ export default function MonsterTechnoPage() {
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed'>
               Start your journey toward becoming a better developer. Subscribe to our channel, explore our projects, 
-              and be part of a community that's passionate about building exceptional software.
+              and be part of a community that&apos;s passionate about building exceptional software.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link

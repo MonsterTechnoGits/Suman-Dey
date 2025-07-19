@@ -30,7 +30,7 @@ export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({ chil
   const [scrollDirection, setScrollDirection] = useState<'up' | 'down' | null>(null);
   
   const lastScrollTop = useRef(0);
-  const scrollTimer = useRef<NodeJS.Timeout>();
+  const scrollTimer = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
