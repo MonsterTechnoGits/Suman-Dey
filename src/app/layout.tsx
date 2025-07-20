@@ -102,22 +102,40 @@ export const metadata: Metadata = {
 // Enhanced schema for Google Knowledge Panel with more professional details
 const personSchema = {
   "@context": "https://schema.org",
-  "@type": "Person",
+  "@type": ["Person", "CreativeWork"],
+  "@id": "https://www.sumandey.com/#person",
   name: "Suman Dey",
+  alternateName: ["Suman", "ImSumanDey", "MonsterTechno"],
   url: "https://www.sumandey.com",
-  image: "https://www.sumandey.com/suman-dey-image.png",
+  mainEntityOfPage: "https://www.sumandey.com",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.sumandey.com/suman-dey-image.png",
+    width: 400,
+    height: 400,
+    caption: "Suman Dey - Senior Full Stack Developer",
+  },
   jobTitle: "Senior Full Stack Developer",
   description:
     "Suman Dey is a passionate Senior Full Stack Developer with over 7 years of experience building sleek, scalable web applications. His expertise lies in creating high-performance, user-friendly digital solutions that merge modern design with robust backend functionality, specializing in React.js, Node.js, TypeScript, and modern cloud technologies.",
-  // Add your birth details here for better Knowledge Panel
-  birthDate: "1997-09-21", // Replace with your actual birth date (YYYY-MM-DD format)
+  birthDate: "1997-09-21",
   birthPlace: {
     "@type": "Place",
     name: "Contai, West Bengal, India",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Contai",
+      addressRegion: "West Bengal",
+      addressCountry: "India",
+    },
+  },
+  nationality: {
+    "@type": "Country",
+    name: "India",
   },
   knowsAbout: [
     "React.js",
-    "Node.js",
+    "Node.js", 
     "TypeScript",
     "JavaScript",
     "Frontend Development",
@@ -134,6 +152,10 @@ const personSchema = {
     "CI/CD",
     "Docker",
     "Team Leadership",
+    "Software Engineering",
+    "Web Development",
+    "Programming",
+    "Technology Consulting",
   ],
   sameAs: [
     "https://github.com/MonsterTechnoGits",
@@ -146,21 +168,34 @@ const personSchema = {
     "@type": "EducationalOrganization",
     name: "Vidyasagar University",
     url: "https://www.vidyasagar.ac.in/",
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "West Bengal",
+      addressCountry: "India",
+    },
   },
   worksFor: {
     "@type": "Organization",
     name: "ROITech Consulting",
-    url: "https://www.roitech.biz", // Replace with actual company URL
+    url: "https://www.roitech.biz",
     description:
       "IT consulting firm specializing in enterprise software solutions, web development, and digital transformation services.",
+    foundingLocation: "India",
   },
   hasOccupation: {
     "@type": "Occupation",
     name: "Full Stack Developer",
-    occupationalCategory: "Software Engineering",
+    occupationalCategory: "15-1254.00",
     description:
       "Develops both frontend and backend components of web applications using modern JavaScript frameworks and technologies.",
     skills: "React.js, Node.js, TypeScript, JavaScript, PostgreSQL, AWS, CI/CD, Team Leadership",
+    responsibilities: [
+      "Designing and developing scalable web applications",
+      "Leading cross-functional development teams",
+      "Mentoring junior developers",
+      "Architecting robust backend systems",
+      "Creating intuitive user interfaces",
+    ],
   },
   workLocation: {
     "@type": "Place",
@@ -172,7 +207,7 @@ const personSchema = {
   },
   award: [
     "Team Lead & Technical Architect at ROITech Consulting",
-    "7+ Years of Full Stack Development Experience",
+    "7+ Years of Full Stack Development Experience", 
     "50+ Successful Project Deployments",
     "Expert in Modern JavaScript Frameworks",
   ],
@@ -187,16 +222,144 @@ const personSchema = {
   ],
   skills:
     "React.js, Node.js, TypeScript, JavaScript, Frontend Development, Backend Development, Full Stack Development, PostgreSQL, AWS, SAPUI5, CI/CD, Docker, Team Leadership",
+  expertise: [
+    "Full Stack Web Development",
+    "React.js Development",
+    "Node.js Backend Development",
+    "TypeScript Programming",
+    "JavaScript Programming",
+    "Database Design and Management",
+    "Cloud Technologies",
+    "Team Leadership",
+    "Software Architecture",
+  ],
+  seeks: "Challenging full stack development projects and technical leadership opportunities",
+};
+
+// Professional Service schema for business queries
+const professionalServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://www.sumandey.com/#service",
+  name: "Suman Dey - Full Stack Development Services",
+  description: "Professional full stack web development services specializing in React.js, Node.js, TypeScript, and modern web technologies.",
+  url: "https://www.sumandey.com",
+  provider: {
+    "@id": "https://www.sumandey.com/#person"
+  },
+  areaServed: [
+    {
+      "@type": "Country", 
+      name: "India"
+    },
+    {
+      "@type": "Place",
+      name: "Global Remote"
+    }
+  ],
+  serviceType: [
+    "Full Stack Web Development",
+    "React.js Development", 
+    "Node.js Backend Development",
+    "TypeScript Programming",
+    "Web Application Architecture",
+    "Technical Consulting",
+    "Team Leadership",
+    "Code Review and Optimization"
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Development Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Full Stack Web Application Development",
+          description: "End-to-end web application development using React.js, Node.js, and TypeScript"
+        }
+      },
+      {
+        "@type": "Offer", 
+        itemOffered: {
+          "@type": "Service",
+          name: "Frontend Development",
+          description: "Modern, responsive frontend development with React.js and TypeScript"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service", 
+          name: "Backend API Development",
+          description: "Scalable backend API development with Node.js and database integration"
+        }
+      }
+    ]
+  }
+};
+
+// FAQ Schema for common developer questions
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.sumandey.com/#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Who is Suman Dey?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Suman Dey is a Senior Full Stack Developer with over 7 years of experience building scalable web applications. He specializes in React.js, Node.js, TypeScript, and modern cloud technologies, currently working as a Team Lead at ROITech Consulting."
+      }
+    },
+    {
+      "@type": "Question", 
+      name: "What does Suman Dey do?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Suman Dey develops high-performance, user-friendly web applications using modern technologies like React.js, Node.js, and TypeScript. He leads development teams, mentors junior developers, and provides technical consulting for enterprise software solutions."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What technologies does Suman Dey work with?",
+      acceptedAnswer: {
+        "@type": "Answer", 
+        text: "Suman Dey is expert in React.js, Node.js, TypeScript, JavaScript, PostgreSQL, AWS, Docker, CI/CD, Next.js, GraphQL, RESTful APIs, and SAPUI5. He also has experience in UI/UX design and cloud technologies."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How to contact Suman Dey?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You can contact Suman Dey through his website at https://www.sumandey.com/contact, LinkedIn at https://www.linkedin.com/in/imsumandey/, or follow his YouTube channel MonsterTechno for technical content."
+      }
+    }
+  ]
 };
 
 // Create a professional WebPage schema as well
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
+  "@id": "https://www.sumandey.com/#webpage",
   name: "Suman Dey | Senior Full Stack Developer & React Expert",
   description:
     "Portfolio of Senior Full Stack Developer Suman Dey, showcasing expertise in React, Node.js, TypeScript and modern web development.",
   url: "https://www.sumandey.com",
+  inLanguage: "en-US",
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.sumandey.com/#website",
+    url: "https://www.sumandey.com",
+    name: "Suman Dey Portfolio",
+    description: "Professional portfolio of Suman Dey - Senior Full Stack Developer",
+    publisher: {
+      "@id": "https://www.sumandey.com/#person"
+    }
+  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
@@ -212,13 +375,20 @@ const webpageSchema = {
     "@type": "ProfilePage",
     mainEntityOfPage: "https://www.sumandey.com",
     about: {
-      "@id": "https://www.sumandey.com/about",
-      "@type": "About",
-      name: "Suman Dey",
-      description:
-        "Senior Full Stack Developer specializing in React, Node.js, TypeScript, and modern JavaScript frameworks. Explore my frontend development and backend projects.",
+      "@id": "https://www.sumandey.com/#person"
     },
   },
+  potentialAction: [
+    {
+      "@type": "ReadAction",
+      target: "https://www.sumandey.com"
+    },
+    {
+      "@type": "SearchAction", 
+      target: "https://www.sumandey.com/contact",
+      "query-input": "required name=search_term_string"
+    }
+  ]
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -238,7 +408,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type='application/ld+json'
           strategy='afterInteractive'
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({ ...personSchema, "@id": "https://www.sumandey.com/#person" }),
+            __html: JSON.stringify(personSchema),
           }}
         />
         <Script
@@ -246,6 +416,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type='application/ld+json'
           strategy='afterInteractive'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }}
+        />
+        <Script
+          id='professional-service-schema'
+          type='application/ld+json'
+          strategy='afterInteractive'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+        />
+        <Script
+          id='faq-schema'
+          type='application/ld+json'
+          strategy='afterInteractive'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
 
         <ThemeProvider
