@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import createMDX from '@next/mdx'
+import remarkGfm from 'remark-gfm'
+import rehypeHighlight from 'rehype-highlight'
 
 const nextConfig: NextConfig = {
   images: {
@@ -10,8 +13,6 @@ const nextConfig: NextConfig = {
   // Enforce React’s strict mode for highlighting potential issues early
   reactStrictMode: true,
 
-  // Enable SWC minification for faster builds and smaller bundles
-  swcMinify: true,
 
   // Remove the Next.js header to prevent exposing framework details
   poweredByHeader: false,
@@ -19,29 +20,19 @@ const nextConfig: NextConfig = {
   // Enable static export output for GitHub Pages deployment
   output: "export",
 
-  // Custom HTTP headers to reinforce SEO and security best practices
-  async headers() {
-    return [
-      {
-        // Apply these headers to all routes
-        source: "/(.*)",
-        headers: [
-          {
-            key: "X-Robots-Tag",
-            value: "all", // Ensures that search engines index your pages
-          },
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
-          },
-          // Additional headers can be added here if needed
-        ],
-      },
-    ];
-  },
 
   // Future configuration options like rewrites, redirects, or experimental features
   // can be added here to further optimize SEO-friendly URL structures.
+  
+  // Configure MDX file extensions
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeHighlight],
+  },
+})
+
+export default withMDX(nextConfig);

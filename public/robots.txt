@@ -39,6 +39,13 @@ Allow: /*.pdf
 # Disallow: /private/
 # Disallow: /_next/static/
 
+# Specifically allow blog content for better indexing
+Allow: /blogs/
+Allow: /blogs/*
+
 # Allow all search engines to index all content
 # This is a public portfolio website for Suman Dey
 # Senior Full Stack Developer & React Expert
+
+# Host directive for canonical domain
+Host: https://www.sumandey.com

@@ -1,17 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import ProfileCard from "@/components/ProfileCard";
 import ClickSpark from "@/components/reactbits/ClickSpark";
-import Noise from "@/components/reactbits/Noise";
 import Particles from "@/components/reactbits/Particles";
-import ClientInteractiveDock from "@/components/ClientInteractiveDock";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import ScrollProgressIndicator from "@/components/ScrollProgressIndicator";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import ScrollDirectionIndicator from "@/components/ScrollDirectionIndicator";
+import ConditionalLayout from "@/components/ConditionalLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -93,10 +91,13 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  themeColor: "#121212",
   alternates: {
     canonical: "https://www.sumandey.com",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#121212",
 };
 
 // Enhanced schema for Google Knowledge Panel with more professional details
@@ -462,27 +463,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     sparkCount={8}
                     duration={400}
                   >
-                    <div className='w-full h-dvh flex flex-col lg:flex-row justify-center items-center px-2 sm:px-6 md:px-10 lg:px-10 xl:px-10 py-6 sm:py-10 lg:py-20 gap-4 sm:gap-6 lg:gap-5'>
-                      <ProfileCard />
-                      <div className='w-full h-full rounded-3xl bg-[#1212127e] backdrop-blur-2xl flex-1'>
-                        <Noise
-                          patternSize={250}
-                          patternScaleX={1}
-                          patternScaleY={1}
-                          patternRefreshInterval={2}
-                          patternAlpha={15}
-                        >
-                          <main className='w-full h-full flex flex-col items-center justify-start'>
-                            <div className='scroll-container w-full px-4 sm:px-6 md:px-10 lg:px-20 pb-[110px] pt-6 sm:pt-10 lg:pt-20 overflow-auto scrollbar-dark scroll-smooth flex-1'>
-                              {children}
-                            </div>
-                            <div className='relative w-full z-50 h-[80px] sm:h-[100px] bg-gradient-to-t from-[#121212] via-[#121212d5] to-[#121212ea] rounded-b-3xl backdrop-blur-2xl'>
-                              <ClientInteractiveDock />
-                            </div>
-                          </main>
-                        </Noise>
-                      </div>
-                    </div>
+                    <ConditionalLayout>
+                      {children}
+                    </ConditionalLayout>
                   </ClickSpark>
                 </div>
               </Particles>
