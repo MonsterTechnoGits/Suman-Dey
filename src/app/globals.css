@@ -238,34 +238,82 @@
   /* Highlight.js theme for code syntax highlighting */
   @import 'highlight.js/styles/github-dark.css';
 
-  /* Blog content styles */
+  /* Enhanced Blog content styles for better syntax highlighting */
   .prose {
     max-width: none;
   }
 
-  .prose pre {
-    background-color: rgb(17 24 39) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    overflow-x: auto;
-    margin: 1.5rem 0;
+  /* Code block styling with syntax highlighting support */
+  .prose pre,
+  pre.hljs {
+    background-color: rgb(13 17 23) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 0.5rem !important;
+    padding: 1rem !important;
+    overflow-x: auto !important;
+    margin: 1.5rem 0 !important;
+    font-family: 'Fira Code', 'JetBrains Mono', 'Monaco', 'Menlo', 'Consolas', monospace !important;
+    font-size: 0.875rem !important;
+    line-height: 1.6 !important;
   }
 
-  .prose code {
-    background-color: rgb(55 65 81);
-    color: rgb(147 197 253);
+  /* Inline code styling */
+  .prose code:not(pre code),
+  .prose :not(pre) > code {
+    background-color: rgb(55 65 81) !important;
+    color: rgb(147 197 253) !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 0.25rem !important;
+    font-size: 0.875rem !important;
+    font-family: 'Fira Code', 'JetBrains Mono', 'Monaco', 'Menlo', 'Consolas', monospace !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  }
+
+  /* Code inside pre blocks (syntax highlighted) */
+  .prose pre code,
+  pre.hljs code,
+  .hljs {
+    background-color: transparent !important;
+    color: inherit !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+  }
+
+  /* Ensure highlight.js classes work properly */
+  .hljs-keyword { color: #ff7b72 !important; }
+  .hljs-string { color: #a5d6ff !important; }
+  .hljs-comment { color: #8b949e !important; }
+  .hljs-number { color: #79c0ff !important; }
+  .hljs-function { color: #d2a8ff !important; }
+  .hljs-variable { color: #ffa657 !important; }
+  .hljs-tag { color: #7ee787 !important; }
+  .hljs-attr { color: #79c0ff !important; }
+  .hljs-built_in { color: #ffa657 !important; }
+  .hljs-type { color: #ffa657 !important; }
+  .hljs-title { color: #d2a8ff !important; }
+  .hljs-params { color: #c9d1d9 !important; }
+
+  /* Language label styling */
+  .prose pre[data-language]::before {
+    content: attr(data-language);
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
-    font-size: 0.875rem;
-    font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 500;
   }
 
-  .prose pre code {
-    background-color: transparent;
-    color: inherit;
-    padding: 0;
-    border-radius: 0;
+  .prose pre {
+    position: relative;
   }
 
   /* Line clamp utilities for blog cards */

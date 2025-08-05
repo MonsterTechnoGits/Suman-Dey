@@ -14,9 +14,17 @@ export default function ViewCounter({ slug }: ViewCounterProps) {
   const [viewCount, setViewCount] = useState<number>(0)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [mounted, setMounted] = useState(false)
+
+  // Handle client-side mounting
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     const incrementView = async () => {
+      if (!mounted) return
+      
       try {
         setIsLoading(true)
         setError(null)
@@ -84,7 +92,17 @@ export default function ViewCounter({ slug }: ViewCounterProps) {
     const timer = setTimeout(incrementView, 500)
     
     return () => clearTimeout(timer)
-  }, [slug])
+  }, [slug, mounted])
+
+  // Don't render until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <div className="flex items-center gap-2 text-sm text-gray-400">
+        <span>👁️</span>
+        <span>— views</span>
+      </div>
+    )
+  }
 
   return (
     <div className="flex items-center gap-2 text-sm text-gray-400">
